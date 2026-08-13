@@ -12,9 +12,14 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
-    LLM_PROVIDER: Literal["anthropic", "openai", "ollama"] = "anthropic"
+    LLM_PROVIDER: Literal["anthropic", "openai", "ollama", "gemini"] = "anthropic"
     ANTHROPIC_API_KEY: SecretStr | None = None
     OPENAI_API_KEY: SecretStr | None = None
+    GEMINI_API_KEY: SecretStr | None = None
+    GEMINI_VISION_MODEL: str
+    GEMINI_TEXT_MODEL: str
+    GEMINI_RPM: int = Field(default=10, gt=0)
+    GEMINI_RPD: int = Field(default=250, gt=0)
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     VISION_MODEL: str
     VISION_MAX_EDGE_PX: int = Field(default=768, gt=0)

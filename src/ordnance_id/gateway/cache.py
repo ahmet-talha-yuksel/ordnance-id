@@ -23,9 +23,17 @@ class StructuredDiskCache:
         self.root = root
 
     @staticmethod
-    def key(*, model: str, prompt: str, schema_json: str, image_bytes: bytes) -> str:
+    def key(
+        *, provider: str, model: str, prompt: str, schema_json: str, image_bytes: bytes
+    ) -> str:
         digest = hashlib.sha256()
-        for value in (model.encode(), prompt.encode(), schema_json.encode(), image_bytes):
+        for value in (
+            provider.encode(),
+            model.encode(),
+            prompt.encode(),
+            schema_json.encode(),
+            image_bytes,
+        ):
             digest.update(len(value).to_bytes(8, "big"))
             digest.update(value)
         return digest.hexdigest()

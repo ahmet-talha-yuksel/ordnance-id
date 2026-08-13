@@ -7,10 +7,14 @@ from time import perf_counter
 from typing import Annotated
 
 import typer
+from PIL import Image
 
 from ordnance_id.config import get_settings
+from ordnance_id.data_analysis.tiers import load_class_tiers
 from ordnance_id.evals.io import load_eval_set
 from ordnance_id.evals.observations import ObservationRecord
+from ordnance_id.evals.pilot import select_pilot
+from ordnance_id.evals.size_buckets import size_bucket
 from ordnance_id.gateway.cache import CachedStructuredResult, StructuredDiskCache
 from ordnance_id.gateway.metrics import CallMetrics
 from ordnance_id.gateway.providers import get_provider
@@ -26,34 +30,62 @@ async def _run(
     output: Path | None,
     cache_dir: Path,
     limit: int | None,
+    pilot: bool,
     dry_run: bool,
     yes: bool,
     input_cost_per_million: float,
     output_cost_per_million: float,
 ) -> None:
     settings = get_settings()
+    active_model = (
+        settings.GEMINI_VISION_MODEL
+        if settings.LLM_PROVIDER == "gemini"
+        else settings.VISION_MODEL
+    )
     if output is None:
         safe_model = "".join(
             character if character.isalnum() or character in {"-", "_"} else "_"
-            for character in settings.VISION_MODEL
+            for character in active_model
         )
-        output = Path(f"evals/results/observations_observe_v1_{safe_model}.jsonl")
+        output = Path(
+            f"evals/results/observations_observe_v1_{settings.LLM_PROVIDER}_{safe_model}.jsonl"
+        )
     eval_set = load_eval_set(eval_path)
-    samples = eval_set.samples[:limit] if limit is not None else eval_set.samples
-    estimated_input = len(samples) * 1600
+    if pilot:
+        tiers = load_class_tiers(Path("config/class_tiers.yaml")).mapping()
+        samples = [
+            item.sample for item in select_pilot(eval_set.samples, image_dir, tiers, seed=0)
+        ]
+    else:
+        samples = eval_set.samples[:limit] if limit is not None else eval_set.samples
+    prompt_chars = len(Path("prompts/observe_v1.md").read_text(encoding="utf-8"))
+    estimated_text_tokens = len(samples) * (prompt_chars // 4 + 100)
+    estimated_image_tokens = 0
+    for sample in samples:
+        with Image.open(image_dir / sample.filename) as image:
+            width, height = image.size
+            scale = min(1.0, settings.VISION_MAX_EDGE_PX / max(width, height))
+            estimated_image_tokens += round(width * scale * height * scale / 750)
+    estimated_input = estimated_text_tokens + estimated_image_tokens
     estimated_output = len(samples) * 400
     estimate = (
         estimated_input / 1_000_000 * input_cost_per_million
         + estimated_output / 1_000_000 * output_cost_per_million
     )
     typer.echo(
-        f"Provider={settings.LLM_PROVIDER} model={settings.VISION_MODEL} samples={len(samples)} "
-        f"estimated tokens={estimated_input}+{estimated_output}; estimated cost=${estimate:.4f}"
+        f"Provider={settings.LLM_PROVIDER} model={active_model} samples={len(samples)} "
+        f"prompt=observe_v1 samples={len(samples)} image_tokens≈{estimated_image_tokens} "
+        f"text_tokens≈{estimated_text_tokens} output_tokens≤{estimated_output}; "
+        + (
+            f"maliyet: $0 (free tier); günlük kota≈{len(samples)}/{settings.GEMINI_RPD} istek"
+            if settings.LLM_PROVIDER == "gemini"
+            else f"estimated cost=${estimate:.4f}"
+        )
     )
     if dry_run:
         typer.echo("Dry run: no provider calls were made.")
         return
-    if settings.LLM_PROVIDER != "ollama" and input_cost_per_million <= 0:
+    if settings.LLM_PROVIDER not in {"ollama", "gemini"} and input_cost_per_million <= 0:
         raise typer.BadParameter("Cloud runs require an explicit positive input token price")
     if not yes and not typer.confirm("Proceed with provider calls?"):
         raise typer.Abort()
@@ -73,8 +105,11 @@ async def _run(
             if sample.id in completed:
                 continue
             image_bytes = (image_dir / sample.filename).read_bytes()
+            with Image.open(image_dir / sample.filename) as image:
+                bucket = size_bucket(min(image.size))
             key = cache.key(
-                model=settings.VISION_MODEL,
+                provider=settings.LLM_PROVIDER,
+                model=active_model,
                 prompt=analyzer.system_prompt(),
                 schema_json=json.dumps(
                     OrdnanceObservation.model_json_schema(), sort_keys=True, separators=(",", ":")
@@ -85,7 +120,7 @@ async def _run(
             started = perf_counter()
             error: str | None = None
             observation: OrdnanceObservation | None = None
-            metrics = CallMetrics(provider=settings.LLM_PROVIDER, model=settings.VISION_MODEL)
+            metrics = CallMetrics(provider=settings.LLM_PROVIDER, model=active_model)
             try:
                 if cached:
                     observation = OrdnanceObservation.model_validate(cached.value)
@@ -106,6 +141,8 @@ async def _run(
             )
             record = ObservationRecord(
                 sample_id=sample.id,
+                family=sample.ground_truth.family,
+                size_bucket=bucket,
                 observation=observation,
                 duration_ms=duration_ms,
                 metrics=metrics,
@@ -123,6 +160,7 @@ def run(
     output: Path | None = None,
     cache_dir: Path = Path(".cache/observations"),
     limit: Annotated[int | None, typer.Option(min=1)] = None,
+    pilot: bool = False,
     dry_run: bool = False,
     yes: bool = False,
     input_cost_per_million: Annotated[float, typer.Option(min=0)] = 0.0,
@@ -137,6 +175,7 @@ def run(
             output,
             cache_dir,
             limit,
+            pilot,
             dry_run,
             yes,
             input_cost_per_million,

@@ -7,6 +7,8 @@ REQUIRED = {
     "VISION_MODEL": "vision-test",
     "TEXT_MODEL": "text-test",
     "FAST_MODEL": "fast-test",
+    "GEMINI_VISION_MODEL": "gemini-vision-test",
+    "GEMINI_TEXT_MODEL": "gemini-text-test",
     "DATABASE_URL": "postgresql://localhost/test",
     "QDRANT_URL": "http://localhost:6333",
 }

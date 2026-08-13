@@ -7,7 +7,8 @@ from PIL import Image
 from pydantic import BaseModel, Field
 
 from ordnance_id.evals.io import load_eval_set
-from ordnance_id.evals.size_buckets import size_bucket
+from ordnance_id.evals.schema import OrdnanceFamily
+from ordnance_id.evals.size_buckets import SizeBucket, size_bucket
 from ordnance_id.gateway.metrics import CallMetrics
 from ordnance_id.vision.schema import OrdnanceObservation
 
@@ -16,6 +17,8 @@ class ObservationRecord(BaseModel):
     """Record one eval sample's observation outcome and operational telemetry."""
 
     sample_id: str
+    family: OrdnanceFamily
+    size_bucket: SizeBucket
     observation: OrdnanceObservation | None = None
     duration_ms: float = Field(ge=0)
     metrics: CallMetrics

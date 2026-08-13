@@ -22,6 +22,8 @@ async def health(settings: Annotated[Settings, Depends(get_settings)]) -> dict[s
         and settings.ANTHROPIC_API_KEY is not None
         or settings.LLM_PROVIDER == "openai"
         and settings.OPENAI_API_KEY is not None
+        or settings.LLM_PROVIDER == "gemini"
+        and settings.GEMINI_API_KEY is not None
     )
     return {
         "status": "ok" if provider_ready else "degraded",
