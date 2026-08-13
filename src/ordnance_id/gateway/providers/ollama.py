@@ -4,6 +4,7 @@ from collections.abc import Sequence
 from typing import Any, cast
 
 import httpx
+from pydantic import ValidationError
 
 from ordnance_id.gateway.base import ImageInput, Message, SchemaT
 
@@ -56,17 +57,24 @@ class OllamaProvider:
             if not request_messages:
                 request_messages.append({"role": "user", "content": "Analyze the image(s)."})
             request_messages[-1]["images"] = [image["data"] for image in images]
-        response = await self._client.post(
-            "/api/chat",
-            json={
-                "model": self._model,
-                "messages": request_messages,
-                "stream": False,
-                "format": schema.model_json_schema(),
-                "options": {"temperature": 0},
-            },
-        )
-        response.raise_for_status()
-        content = cast(str, response.json()["message"]["content"])
-        return schema.model_validate_json(content)
+        last_error: ValidationError | None = None
+        for _attempt in range(3):
+            response = await self._client.post(
+                "/api/chat",
+                json={
+                    "model": self._model,
+                    "messages": request_messages,
+                    "stream": False,
+                    "format": schema.model_json_schema(),
+                    "options": {"temperature": 0},
+                },
+            )
+            response.raise_for_status()
+            content = cast(str, response.json()["message"]["content"])
+            try:
+                return schema.model_validate_json(content)
+            except ValidationError as error:
+                last_error = error
+        assert last_error is not None
+        raise last_error
 
