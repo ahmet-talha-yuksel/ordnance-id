@@ -2,6 +2,7 @@
 
 import asyncio
 import json
+import signal
 from pathlib import Path
 from time import perf_counter
 from typing import Annotated
@@ -14,6 +15,7 @@ from ordnance_id.data_analysis.tiers import load_class_tiers
 from ordnance_id.evals.io import load_eval_set
 from ordnance_id.evals.observations import ObservationRecord
 from ordnance_id.evals.pilot import select_pilot
+from ordnance_id.evals.run_control import ObservationLedger, RequestBudget
 from ordnance_id.evals.size_buckets import size_bucket
 from ordnance_id.gateway.cache import CachedStructuredResult, StructuredDiskCache
 from ordnance_id.gateway.metrics import CallMetrics
@@ -37,6 +39,7 @@ async def _run(
     input_cost_per_million: float,
     output_cost_per_million: float,
     prompt_path: Path,
+    resume: bool,
 ) -> None:
     settings = get_settings()
     active_model = (
@@ -87,7 +90,8 @@ async def _run(
         f"prompt={prompt_path.stem} samples={len(samples)} image_tokens≈{estimated_image_tokens} "
         f"text_tokens≈{estimated_text_tokens} output_tokens≤{estimated_output}; "
         + (
-            f"maliyet: $0 (free tier); günlük kota≈{len(samples)}/{settings.GEMINI_RPD} istek"
+            f"maliyet: $0 (free tier); günlük kota≈{len(samples)}/{settings.GEMINI_RPD} istek; "
+            f"koşum bütçesi={settings.GEMINI_RPD_BUDGET}"
             if settings.LLM_PROVIDER == "gemini"
             else f"estimated cost=${estimate:.4f}"
         )
@@ -104,18 +108,33 @@ async def _run(
         provider, prompt_path=prompt_path, max_edge_px=settings.VISION_MAX_EDGE_PX
     )
     cache = StructuredDiskCache(cache_dir)
-    completed: set[str] = set()
-    if output.exists():
-        completed = {
-            json.loads(line)["sample_id"]
-            for line in output.read_text(encoding="utf-8").splitlines()
-            if line.strip()
-        }
-    output.parent.mkdir(parents=True, exist_ok=True)
-    with output.open("a", encoding="utf-8") as handle:
-        for sample in samples:
-            if sample.id in completed:
-                continue
+    try:
+        ledger = ObservationLedger(output, resume=resume)
+    except FileExistsError as error:
+        raise typer.BadParameter(str(error)) from error
+    pending = [sample for sample in samples if sample.id not in ledger.completed_ids]
+    if resume:
+        typer.echo(f"Resume: {len(samples) - len(pending)} existing records skipped.")
+    budget = RequestBudget(settings.GEMINI_RPD_BUDGET)
+    stop_requested = False
+
+    def request_stop(_signum: int, _frame: object) -> None:
+        nonlocal stop_requested
+        stop_requested = True
+        typer.echo("SIGINT received; stopping after the current sample.")
+
+    previous_sigint = signal.signal(signal.SIGINT, request_stop)
+    run_started = perf_counter()
+    errors = 0
+    processed = 0
+    try:
+        for sample in pending:
+            if not budget.available:
+                typer.echo(
+                    f"Quota budget reached ({budget.used}/{budget.limit}); "
+                    f"stopped before {sample.id}. Resume with --resume."
+                )
+                break
             image_bytes = (image_dir / sample.filename).read_bytes()
             with Image.open(image_dir / sample.filename) as image:
                 bucket = size_bucket(min(image.size))
@@ -132,7 +151,9 @@ async def _run(
             started = perf_counter()
             error: str | None = None
             observation: OrdnanceObservation | None = None
-            metrics = CallMetrics(provider=settings.LLM_PROVIDER, model=active_model)
+            metrics = CallMetrics(
+                provider=settings.LLM_PROVIDER, model=active_model, request_count=0
+            )
             try:
                 if cached:
                     observation = OrdnanceObservation.model_validate(cached.value)
@@ -146,6 +167,9 @@ async def _run(
                     )
             except Exception as caught:  # noqa: BLE001
                 error = f"{type(caught).__name__}: {caught}"
+                metrics = provider.last_metrics or metrics
+            if not metrics.cache_hit:
+                budget.add(metrics.request_count)
             duration_ms = (perf_counter() - started) * 1000
             cost = (
                 metrics.input_tokens / 1_000_000 * input_cost_per_million
@@ -161,8 +185,27 @@ async def _run(
                 estimated_cost_usd=cost,
                 error=error,
             )
-            handle.write(record.model_dump_json() + "\n")
-            handle.flush()
+            ledger.append(record)
+            processed += 1
+            errors += error is not None
+            if processed % 25 == 0:
+                elapsed = perf_counter() - run_started
+                average = elapsed / processed
+                remaining = len(pending) - processed
+                typer.echo(
+                    f"Progress: completed={processed}/{len(pending)} errors={errors} "
+                    f"average={average:.1f}s ETA={average * remaining:.0f}s "
+                    f"requests={budget.used}/{budget.limit}"
+                )
+            if stop_requested:
+                typer.echo(f"Clean stop after {sample.id}; resume with --resume.")
+                break
+    finally:
+        signal.signal(signal.SIGINT, previous_sigint)
+    typer.echo(
+        f"Run summary: completed={processed}/{len(pending)} errors={errors} "
+        f"requests={budget.used}/{budget.limit}"
+    )
 
 
 @app.command()
@@ -179,6 +222,7 @@ def run(
     input_cost_per_million: Annotated[float, typer.Option(min=0)] = 0.0,
     output_cost_per_million: Annotated[float, typer.Option(min=0)] = 0.0,
     prompt_path: Path = Path("prompts/observe_v1.md"),
+    resume: bool = False,
 ) -> None:
     """Estimate first, then optionally run cached observations sequentially."""
 
@@ -196,6 +240,7 @@ def run(
             input_cost_per_million,
             output_cost_per_million,
             prompt_path,
+            resume,
         )
     )
 

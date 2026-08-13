@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     GEMINI_TEXT_MODEL: str
     GEMINI_RPM: int = Field(default=10, gt=0)
     GEMINI_RPD: int = Field(default=250, gt=0)
+    GEMINI_RPD_BUDGET: int = Field(default=200, gt=0)
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     VISION_MODEL: str
     VISION_MAX_EDGE_PX: int = Field(default=768, gt=0)
