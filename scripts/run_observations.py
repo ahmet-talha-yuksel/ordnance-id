@@ -31,6 +31,7 @@ async def _run(
     cache_dir: Path,
     limit: int | None,
     pilot: bool,
+    sample_ids: str | None,
     dry_run: bool,
     yes: bool,
     input_cost_per_million: float,
@@ -51,7 +52,14 @@ async def _run(
             f"evals/results/observations_observe_v1_{settings.LLM_PROVIDER}_{safe_model}.jsonl"
         )
     eval_set = load_eval_set(eval_path)
-    if pilot:
+    if sample_ids:
+        requested_ids = [value.strip() for value in sample_ids.split(",") if value.strip()]
+        by_id = {sample.id: sample for sample in eval_set.samples}
+        missing = [sample_id for sample_id in requested_ids if sample_id not in by_id]
+        if missing:
+            raise typer.BadParameter("Unknown sample IDs: " + ", ".join(missing))
+        samples = [by_id[sample_id] for sample_id in requested_ids]
+    elif pilot:
         tiers = load_class_tiers(Path("config/class_tiers.yaml")).mapping()
         samples = [
             item.sample for item in select_pilot(eval_set.samples, image_dir, tiers, seed=0)
@@ -161,6 +169,7 @@ def run(
     cache_dir: Path = Path(".cache/observations"),
     limit: Annotated[int | None, typer.Option(min=1)] = None,
     pilot: bool = False,
+    sample_ids: str | None = None,
     dry_run: bool = False,
     yes: bool = False,
     input_cost_per_million: Annotated[float, typer.Option(min=0)] = 0.0,
@@ -176,6 +185,7 @@ def run(
             cache_dir,
             limit,
             pilot,
+            sample_ids,
             dry_run,
             yes,
             input_cost_per_million,
