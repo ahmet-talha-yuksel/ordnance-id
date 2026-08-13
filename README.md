@@ -45,10 +45,31 @@ uv run mypy src/
 uv run pytest
 ```
 
+## Data and evaluation tooling
+
+CTX-UXO v2 is used only as licensed evaluation data; this project does not train on it. The source
+is **CTX-UXO: A Comprehensive Dataset for Detection and Identification of UneXploded Ordnances**,
+by Gheorghe Marian Craioveanu and Grigore Stamatescu, DOI
+[`10.21227/cwnm-de53`](https://doi.org/10.21227/cwnm-de53), licensed CC BY 4.0. The source contains
+real ordnance and replicas, which is a documented limitation.
+
+```bash
+PYTHONPATH=src uv run python scripts/fetch_data.py list
+PYTHONPATH=src uv run python scripts/fetch_data.py download ctx-uxo-v2
+PYTHONPATH=src uv run python scripts/analyze_dataset.py
+PYTHONPATH=src uv run python scripts/build_eval_set.py --max-per-class 25
+PYTHONPATH=src uv run python scripts/validate_eval_set.py
+```
+
+The `/ingest` endpoint accepts bounded JPEG, PNG, or WebP uploads. It returns HTTP 200 with
+`accepted=false` when image quality is inadequate; rejected images are not forwarded. GPS is
+suppressed by default and accepted images are stripped of EXIF before downstream use.
+
 ## Status
 
-**Phase 0 — project scaffolding and architectural boundaries.** No identification workflow is
-implemented or operationally validated.
+**Phase 1 — data & ingest.** Licensed acquisition, descriptive dataset analysis, evaluation-set
+validation, and the image-quality gate are implemented. No identification workflow is implemented
+or operationally validated.
 
 ## Documentation
 
@@ -58,3 +79,5 @@ implemented or operationally validated.
 - [ADR-001: Provider abstraction](docs/decisions/ADR-001-provider-abstraction.md)
 - [ADR-002: No GPU model execution in Docker](docs/decisions/ADR-002-no-gpu-in-docker.md)
 - [ADR-003: Fixed safety templates](docs/decisions/ADR-003-fixed-safety-templates.md)
+- [ADR-004: EXIF privacy by default](docs/decisions/ADR-004-exif-privacy.md)
+- [ADR-005: No project-specific training](docs/decisions/ADR-005-no-training.md)

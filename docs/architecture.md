@@ -6,7 +6,10 @@
 Photograph + metadata
          |
          v
-      Ingest ---------> quality failure ---------> abstain
+      Ingest
+   metadata policy
+   + quality gate ----> quality failure ---------> reject (accepted=false)
+   + EXIF stripping
          |
          v
        Vision -------- observable evidence
@@ -30,7 +33,9 @@ Photograph + metadata
 
 - **API:** Validates transport-level requests and exposes results without leaking secrets.
 - **Agent:** Coordinates the workflow; it does not contain provider-specific code.
-- **Ingest:** Validates input formats, strips GPS by default, and applies initial quality checks.
+- **Ingest:** Enforces size/MIME constraints, suppresses GPS by default, applies a deterministic
+  quality gate, and strips all EXIF before accepted bytes can reach storage or a model. Rejected
+  inputs stop at this layer and return reasons rather than a forced analysis.
 - **Vision:** Extracts observable attributes without asserting an exact ordnance identity.
 - **RAG:** Retrieves traceable evidence only from reviewed sources.
 - **Decision:** Produces probabilistic family-level candidates from evidence and context.
@@ -42,4 +47,3 @@ Photograph + metadata
 
 The application and all model execution run on the host during macOS development. Docker Compose
 contains only Postgres and Qdrant.
-
