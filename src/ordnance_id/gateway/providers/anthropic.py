@@ -7,6 +7,7 @@ import httpx
 from pydantic import ValidationError
 
 from ordnance_id.gateway.base import ImageInput, Message, SchemaT
+from ordnance_id.gateway.metrics import CallMetrics
 
 
 class AnthropicProvider:
@@ -20,6 +21,7 @@ class AnthropicProvider:
         client: httpx.AsyncClient | None = None,
     ) -> None:
         self._model = model
+        self._last_metrics: CallMetrics | None = None
         self._client = client or httpx.AsyncClient(
             base_url="https://api.anthropic.com",
             headers={
@@ -29,6 +31,10 @@ class AnthropicProvider:
             },
             timeout=60.0,
         )
+
+    @property
+    def last_metrics(self) -> CallMetrics | None:
+        return self._last_metrics
 
     async def complete(
         self,
@@ -73,18 +79,39 @@ class AnthropicProvider:
             "tool_choice": {"type": "tool", "name": "submit_result"},
         }
         last_error: ValidationError | None = None
-        for _attempt in range(3):
+        input_tokens = 0
+        output_tokens = 0
+        for attempt in range(3):
             response = await self._client.post("/v1/messages", json=payload)
             response.raise_for_status()
-            blocks = cast(list[dict[str, Any]], response.json()["content"])
+            response_data = cast(dict[str, Any], response.json())
+            usage = cast(dict[str, Any], response_data.get("usage", {}))
+            input_tokens += int(usage.get("input_tokens", 0))
+            output_tokens += int(usage.get("output_tokens", 0))
+            blocks = cast(list[dict[str, Any]], response_data["content"])
             tool_input: Any = next(
                 (block.get("input") for block in blocks if block.get("type") == "tool_use"),
                 {},
             )
             try:
-                return schema.model_validate(tool_input)
+                result = schema.model_validate(tool_input)
+                self._last_metrics = CallMetrics(
+                    provider="anthropic",
+                    model=self._model,
+                    input_tokens=input_tokens,
+                    output_tokens=output_tokens,
+                    retries=attempt,
+                )
+                return result
             except ValidationError as error:
                 last_error = error
+        self._last_metrics = CallMetrics(
+            provider="anthropic",
+            model=self._model,
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+            retries=2,
+        )
         assert last_error is not None
         raise last_error
 

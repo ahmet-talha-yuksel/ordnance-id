@@ -1,12 +1,17 @@
 from pathlib import Path
 
 from ordnance_id.gateway.base import ImageInput, Message, SchemaT
+from ordnance_id.gateway.metrics import CallMetrics
 from ordnance_id.vision.analyzer import VisionAnalyzer
 from ordnance_id.vision.schema import OrdnanceObservation
 from tests.ingest_helpers import image_bytes
 
 
 class FakeGateway:
+    @property
+    def last_metrics(self) -> CallMetrics | None:
+        return None
+
     async def complete(
         self,
         messages: list[Message],

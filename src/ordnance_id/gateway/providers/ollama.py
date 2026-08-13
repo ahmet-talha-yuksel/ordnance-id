@@ -7,6 +7,7 @@ import httpx
 from pydantic import ValidationError
 
 from ordnance_id.gateway.base import ImageInput, Message, SchemaT
+from ordnance_id.gateway.metrics import CallMetrics
 
 
 class OllamaProvider:
@@ -20,7 +21,12 @@ class OllamaProvider:
         client: httpx.AsyncClient | None = None,
     ) -> None:
         self._model = model
+        self._last_metrics: CallMetrics | None = None
         self._client = client or httpx.AsyncClient(base_url=base_url, timeout=120.0)
+
+    @property
+    def last_metrics(self) -> CallMetrics | None:
+        return self._last_metrics
 
     async def complete(
         self,
@@ -58,7 +64,7 @@ class OllamaProvider:
                 request_messages.append({"role": "user", "content": "Analyze the image(s)."})
             request_messages[-1]["images"] = [image["data"] for image in images]
         last_error: ValidationError | None = None
-        for _attempt in range(3):
+        for attempt in range(3):
             response = await self._client.post(
                 "/api/chat",
                 json={
@@ -70,11 +76,22 @@ class OllamaProvider:
                 },
             )
             response.raise_for_status()
-            content = cast(str, response.json()["message"]["content"])
+            response_data = cast(dict[str, Any], response.json())
+            content = cast(str, cast(dict[str, Any], response_data["message"])["content"])
             try:
-                return schema.model_validate_json(content)
+                result = schema.model_validate_json(content)
+                self._last_metrics = CallMetrics(
+                    provider="ollama",
+                    model=self._model,
+                    input_tokens=int(response_data.get("prompt_eval_count", 0)),
+                    output_tokens=int(response_data.get("eval_count", 0)),
+                    retries=attempt,
+                )
+                return result
             except ValidationError as error:
                 last_error = error
+        self._last_metrics = CallMetrics(
+            provider="ollama", model=self._model, retries=2
+        )
         assert last_error is not None
         raise last_error
-

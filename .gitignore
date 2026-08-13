@@ -185,6 +185,7 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .venv/
+.cache/
 .env
 data/raw/*
 !data/raw/.gitkeep

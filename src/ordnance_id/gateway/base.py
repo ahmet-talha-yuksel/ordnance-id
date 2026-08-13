@@ -5,6 +5,8 @@ from typing import Protocol, TypedDict, TypeVar
 
 from pydantic import BaseModel
 
+from ordnance_id.gateway.metrics import CallMetrics
+
 
 class Message(TypedDict):
     """Represent one provider-neutral chat message."""
@@ -26,6 +28,11 @@ SchemaT = TypeVar("SchemaT", bound=BaseModel)
 class LLMProvider(Protocol):
     """Describe operations every model provider must implement."""
 
+    @property
+    def last_metrics(self) -> CallMetrics | None:
+        """Return metrics for the most recent call in this sequential provider instance."""
+        ...
+
     async def complete(
         self,
         messages: Sequence[Message],
@@ -46,4 +53,3 @@ class LLMProvider(Protocol):
     ) -> SchemaT:
         """Return a completion validated against the supplied Pydantic schema."""
         ...
-
