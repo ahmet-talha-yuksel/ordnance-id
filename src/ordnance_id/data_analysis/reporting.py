@@ -6,6 +6,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 
 from ordnance_id.data_analysis.models import DatasetReport
+from ordnance_id.data_analysis.tiers import ClassTier
 
 
 def _save_histogram(values: list[float], title: str, xlabel: str, path: Path) -> None:
@@ -19,7 +20,12 @@ def _save_histogram(values: list[float], title: str, xlabel: str, path: Path) ->
     plt.close(figure)
 
 
-def write_report(report: DatasetReport, markdown_path: Path, figures_dir: Path) -> None:
+def write_report(
+    report: DatasetReport,
+    markdown_path: Path,
+    figures_dir: Path,
+    class_tiers: dict[str, ClassTier],
+) -> None:
     """Write tables, explicit limitations, and distribution charts."""
 
     figures_dir.mkdir(parents=True, exist_ok=True)
@@ -51,10 +57,13 @@ def write_report(report: DatasetReport, markdown_path: Path, figures_dir: Path) 
             widths.extend(float(width) for width, _height in split.resolutions)
             heights.extend(float(height) for _width, height in split.resolutions)
         total = sum(class_counts.values())
+        missing_tiers = sorted(set(class_counts) - class_tiers.keys())
+        if missing_tiers:
+            raise ValueError("Classes missing from class_tiers.yaml: " + ", ".join(missing_tiers))
         lines.extend(["", "| Class | Instances | Percentage | Assessment |", "|---|---:|---:|---|"])
         for class_name, count in class_counts.most_common():
             percentage = count / total * 100 if total else 0.0
-            assessment = "insufficient_for_claims" if count < 50 else "descriptive_only"
+            assessment = class_tiers[class_name]
             lines.append(f"| {class_name} | {count} | {percentage:.2f}% | {assessment} |")
         if repository.warnings:
             lines.extend(["", "Warnings:", *[f"- {warning}" for warning in repository.warnings]])
@@ -105,6 +114,8 @@ def write_report(report: DatasetReport, markdown_path: Path, figures_dir: Path) 
             "diversity.",
             "- These descriptive statistics do not validate identification performance or "
             "operational use.",
+            "- A region without an annotation is not proof that no ordnance is present; "
+            "background distractor labels therefore have medium confidence only.",
             "",
         ]
     )

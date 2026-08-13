@@ -1,0 +1,4 @@
+reportable: [Projectile, Grenade, "Mortar Bomb", Cartridge]
+limited: ["Aviation Bomb", "Cartridge Magazine", Fuse, RPG]
+insufficient: [LandMine, Rocket, "AntiSubmarine Bomb", "Sea Mine"]
+

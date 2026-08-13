@@ -6,6 +6,7 @@ import typer
 
 from ordnance_id.data_analysis.discovery import analyze_dataset
 from ordnance_id.data_analysis.reporting import write_report
+from ordnance_id.data_analysis.tiers import load_class_tiers
 
 
 def main(
@@ -16,10 +17,10 @@ def main(
     """Analyze every discovered COCO/YOLO repository under the supplied root."""
 
     report = analyze_dataset(dataset_root)
-    write_report(report, output, figures)
+    tiers = load_class_tiers(Path("config/class_tiers.yaml")).mapping()
+    write_report(report, output, figures, tiers)
     typer.echo(f"Analyzed {len(report.repositories)} repositories; report written to {output}")
 
 
 if __name__ == "__main__":
     typer.run(main)
-

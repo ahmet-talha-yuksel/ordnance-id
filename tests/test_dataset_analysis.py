@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 from ordnance_id.data_analysis.discovery import analyze_dataset, discover_repositories
+from ordnance_id.data_analysis.tiers import ClassTiers
 
 
 def test_discovers_and_analyzes_coco_without_directory_assumptions(tmp_path: Path) -> None:
@@ -27,3 +28,11 @@ def test_discovers_and_analyzes_coco_without_directory_assumptions(tmp_path: Pat
     assert split.class_counts == {"mortar": 1}
     assert split.bbox_area_fractions == [0.04]
 
+
+def test_class_tiers_reject_duplicate_membership() -> None:
+    try:
+        ClassTiers(reportable=["Projectile"], limited=["Projectile"], insufficient=[])
+    except ValueError as error:
+        assert "exactly one tier" in str(error)
+    else:
+        raise AssertionError("duplicate tier membership was accepted")

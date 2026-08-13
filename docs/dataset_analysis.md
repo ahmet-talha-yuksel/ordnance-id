@@ -16,18 +16,18 @@ Analyzed root: `data/raw/ctx-uxo`
 
 | Class | Instances | Percentage | Assessment |
 |---|---:|---:|---|
-| Projectile | 6121 | 39.62% | descriptive_only |
-| Grenade | 4269 | 27.63% | descriptive_only |
-| Mortar Bomb | 3399 | 22.00% | descriptive_only |
-| Cartridge | 987 | 6.39% | descriptive_only |
-| Aviation Bomb | 333 | 2.16% | descriptive_only |
-| Cartridge Magazine | 124 | 0.80% | descriptive_only |
-| Fuse | 92 | 0.60% | descriptive_only |
-| RPG | 63 | 0.41% | descriptive_only |
-| LandMine | 29 | 0.19% | insufficient_for_claims |
-| Rocket | 21 | 0.14% | insufficient_for_claims |
-| AntiSubmarine Bomb | 6 | 0.04% | insufficient_for_claims |
-| Sea Mine | 5 | 0.03% | insufficient_for_claims |
+| Projectile | 6121 | 39.62% | reportable |
+| Grenade | 4269 | 27.63% | reportable |
+| Mortar Bomb | 3399 | 22.00% | reportable |
+| Cartridge | 987 | 6.39% | reportable |
+| Aviation Bomb | 333 | 2.16% | limited |
+| Cartridge Magazine | 124 | 0.80% | limited |
+| Fuse | 92 | 0.60% | limited |
+| RPG | 63 | 0.41% | limited |
+| LandMine | 29 | 0.19% | insufficient |
+| Rocket | 21 | 0.14% | insufficient |
+| AntiSubmarine Bomb | 6 | 0.04% | insufficient |
+| Sea Mine | 5 | 0.03% | insufficient |
 
 ![Class distribution](../reports/figures/repository_1_class_distribution.png)
 
@@ -49,18 +49,18 @@ Analyzed root: `data/raw/ctx-uxo`
 
 | Class | Instances | Percentage | Assessment |
 |---|---:|---:|---|
-| Projectile | 6121 | 39.62% | descriptive_only |
-| Grenade | 4269 | 27.63% | descriptive_only |
-| Mortar Bomb | 3399 | 22.00% | descriptive_only |
-| Cartridge | 987 | 6.39% | descriptive_only |
-| Aviation Bomb | 333 | 2.16% | descriptive_only |
-| Cartridge Magazine | 124 | 0.80% | descriptive_only |
-| Fuse | 92 | 0.60% | descriptive_only |
-| RPG | 63 | 0.41% | descriptive_only |
-| LandMine | 29 | 0.19% | insufficient_for_claims |
-| Rocket | 21 | 0.14% | insufficient_for_claims |
-| AntiSubmarine Bomb | 6 | 0.04% | insufficient_for_claims |
-| Sea Mine | 5 | 0.03% | insufficient_for_claims |
+| Projectile | 6121 | 39.62% | reportable |
+| Grenade | 4269 | 27.63% | reportable |
+| Mortar Bomb | 3399 | 22.00% | reportable |
+| Cartridge | 987 | 6.39% | reportable |
+| Aviation Bomb | 333 | 2.16% | limited |
+| Cartridge Magazine | 124 | 0.80% | limited |
+| Fuse | 92 | 0.60% | limited |
+| RPG | 63 | 0.41% | limited |
+| LandMine | 29 | 0.19% | insufficient |
+| Rocket | 21 | 0.14% | insufficient |
+| AntiSubmarine Bomb | 6 | 0.04% | insufficient |
+| Sea Mine | 5 | 0.03% | insufficient |
 
 ![Class distribution](../reports/figures/repository_2_class_distribution.png)
 
@@ -82,18 +82,18 @@ Analyzed root: `data/raw/ctx-uxo`
 
 | Class | Instances | Percentage | Assessment |
 |---|---:|---:|---|
-| Projectile | 6121 | 39.62% | descriptive_only |
-| Grenade | 4269 | 27.63% | descriptive_only |
-| Mortar Bomb | 3399 | 22.00% | descriptive_only |
-| Cartridge | 987 | 6.39% | descriptive_only |
-| Aviation Bomb | 333 | 2.16% | descriptive_only |
-| Cartridge Magazine | 124 | 0.80% | descriptive_only |
-| Fuse | 92 | 0.60% | descriptive_only |
-| RPG | 63 | 0.41% | descriptive_only |
-| LandMine | 29 | 0.19% | insufficient_for_claims |
-| Rocket | 21 | 0.14% | insufficient_for_claims |
-| AntiSubmarine Bomb | 6 | 0.04% | insufficient_for_claims |
-| Sea Mine | 5 | 0.03% | insufficient_for_claims |
+| Projectile | 6121 | 39.62% | reportable |
+| Grenade | 4269 | 27.63% | reportable |
+| Mortar Bomb | 3399 | 22.00% | reportable |
+| Cartridge | 987 | 6.39% | reportable |
+| Aviation Bomb | 333 | 2.16% | limited |
+| Cartridge Magazine | 124 | 0.80% | limited |
+| Fuse | 92 | 0.60% | limited |
+| RPG | 63 | 0.41% | limited |
+| LandMine | 29 | 0.19% | insufficient |
+| Rocket | 21 | 0.14% | insufficient |
+| AntiSubmarine Bomb | 6 | 0.04% | insufficient |
+| Sea Mine | 5 | 0.03% | insufficient |
 
 ![Class distribution](../reports/figures/repository_3_class_distribution.png)
 
@@ -107,3 +107,4 @@ Analyzed root: `data/raw/ctx-uxo`
 - The dataset includes replicas as well as real ordnance; results may not transfer to field objects.
 - A single geographic and institutional source limits environmental and domain diversity.
 - These descriptive statistics do not validate identification performance or operational use.
+- A region without an annotation is not proof that no ordnance is present; background distractor labels therefore have medium confidence only.
