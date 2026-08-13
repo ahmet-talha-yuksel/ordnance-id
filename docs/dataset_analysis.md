@@ -21,12 +21,12 @@ Analyzed root: `data/raw/ctx-uxo`
 | Mortar Bomb | 3399 | 22.00% | reportable |
 | Cartridge | 987 | 6.39% | reportable |
 | Aviation Bomb | 333 | 2.16% | limited |
-| Cartridge Magazine | 124 | 0.80% | limited |
+| Cartridge Magazine | 124 | 0.80% | reportable |
 | Fuse | 92 | 0.60% | limited |
 | RPG | 63 | 0.41% | limited |
 | LandMine | 29 | 0.19% | insufficient |
-| Rocket | 21 | 0.14% | insufficient |
-| AntiSubmarine Bomb | 6 | 0.04% | insufficient |
+| Rocket | 21 | 0.14% | limited |
+| AntiSubmarine Bomb | 6 | 0.04% | limited |
 | Sea Mine | 5 | 0.03% | insufficient |
 
 ![Class distribution](../reports/figures/repository_1_class_distribution.png)
@@ -54,12 +54,12 @@ Analyzed root: `data/raw/ctx-uxo`
 | Mortar Bomb | 3399 | 22.00% | reportable |
 | Cartridge | 987 | 6.39% | reportable |
 | Aviation Bomb | 333 | 2.16% | limited |
-| Cartridge Magazine | 124 | 0.80% | limited |
+| Cartridge Magazine | 124 | 0.80% | reportable |
 | Fuse | 92 | 0.60% | limited |
 | RPG | 63 | 0.41% | limited |
 | LandMine | 29 | 0.19% | insufficient |
-| Rocket | 21 | 0.14% | insufficient |
-| AntiSubmarine Bomb | 6 | 0.04% | insufficient |
+| Rocket | 21 | 0.14% | limited |
+| AntiSubmarine Bomb | 6 | 0.04% | limited |
 | Sea Mine | 5 | 0.03% | insufficient |
 
 ![Class distribution](../reports/figures/repository_2_class_distribution.png)
@@ -87,12 +87,12 @@ Analyzed root: `data/raw/ctx-uxo`
 | Mortar Bomb | 3399 | 22.00% | reportable |
 | Cartridge | 987 | 6.39% | reportable |
 | Aviation Bomb | 333 | 2.16% | limited |
-| Cartridge Magazine | 124 | 0.80% | limited |
+| Cartridge Magazine | 124 | 0.80% | reportable |
 | Fuse | 92 | 0.60% | limited |
 | RPG | 63 | 0.41% | limited |
 | LandMine | 29 | 0.19% | insufficient |
-| Rocket | 21 | 0.14% | insufficient |
-| AntiSubmarine Bomb | 6 | 0.04% | insufficient |
+| Rocket | 21 | 0.14% | limited |
+| AntiSubmarine Bomb | 6 | 0.04% | limited |
 | Sea Mine | 5 | 0.03% | insufficient |
 
 ![Class distribution](../reports/figures/repository_3_class_distribution.png)

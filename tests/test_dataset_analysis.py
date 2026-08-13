@@ -29,10 +29,20 @@ def test_discovers_and_analyzes_coco_without_directory_assumptions(tmp_path: Pat
     assert split.bbox_area_fractions == [0.04]
 
 
-def test_class_tiers_reject_duplicate_membership() -> None:
+def test_family_has_exactly_one_tier_and_thresholds_are_enforced() -> None:
     try:
-        ClassTiers(reportable=["Projectile"], limited=["Projectile"], insufficient=[])
+        ClassTiers.model_validate(
+            {
+                "thresholds": {
+                    "reportable_min_instances": 500,
+                    "limited_min_instances": 50,
+                },
+                "families": {
+                    "rocket": {"tier": "reportable", "mapped_instance_count": 84}
+                },
+            }
+        )
     except ValueError as error:
-        assert "exactly one tier" in str(error)
+        assert "mapped count requires limited" in str(error)
     else:
-        raise AssertionError("duplicate tier membership was accepted")
+        raise AssertionError("a family was allowed an inconsistent second tier")

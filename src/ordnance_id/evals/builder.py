@@ -144,7 +144,8 @@ def is_strictly_disjoint(candidate: Box, annotations: list[Box], margin: float =
 
 def _select_positives(
     annotations: list[Annotation],
-    tiers: dict[str, ClassTier],
+    tiers: dict[OrdnanceFamily, ClassTier],
+    mapping: dict[str, OrdnanceFamily],
     max_per_class: int,
     rng: random.Random,
 ) -> list[Annotation]:
@@ -161,7 +162,9 @@ def _select_positives(
             unique_by_image.setdefault(item.image, item)
         diverse = list(unique_by_image.values())
         remaining = [item for item in values if item not in diverse]
-        limit = len(values) if tiers[source_class] == "insufficient" else max_per_class
+        limit = (
+            len(values) if tiers[mapping[source_class]] == "insufficient" else max_per_class
+        )
         selected.extend((diverse + remaining)[:limit])
     return selected
 
@@ -183,7 +186,7 @@ def _save_crop(image: Image.Image, box: Box, path: Path) -> None:
 def build_crop_eval_set(
     annotations: list[Annotation],
     mapping: dict[str, OrdnanceFamily],
-    tiers: dict[str, ClassTier],
+    tiers: dict[OrdnanceFamily, ClassTier],
     source: DataSource,
     manifest: ManifestEntry,
     output_images: Path,
@@ -195,13 +198,14 @@ def build_crop_eval_set(
 
     source_classes = {annotation.source_class for annotation in annotations}
     missing_mapping = sorted(source_classes - mapping.keys())
-    missing_tiers = sorted(source_classes - tiers.keys())
+    mapped_families = {mapping[source_class] for source_class in source_classes & mapping.keys()}
+    missing_tiers = sorted(mapped_families - tiers.keys())
     if missing_mapping:
         raise ValueError("Unmapped source classes: " + ", ".join(missing_mapping))
     if missing_tiers:
         raise ValueError("Untiered source classes: " + ", ".join(missing_tiers))
     rng = random.Random(seed)
-    selected = _select_positives(annotations, tiers, max_per_class, rng)
+    selected = _select_positives(annotations, tiers, mapping, max_per_class, rng)
     output_images.mkdir(parents=True, exist_ok=True)
     _clean_previous_outputs(output_images)
     samples: list[EvalSample] = []

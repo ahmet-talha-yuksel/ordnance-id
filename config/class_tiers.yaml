@@ -1,4 +1,15 @@
-reportable: [Projectile, Grenade, "Mortar Bomb", Cartridge]
-limited: ["Aviation Bomb", "Cartridge Magazine", Fuse, RPG]
-insufficient: [LandMine, Rocket, "AntiSubmarine Bomb", "Sea Mine"]
+thresholds:
+  reportable_min_instances: 500
+  limited_min_instances: 50
+
+# Family tiers are applied after source-class mapping. Counts are documented from CTX-UXO v2.
+families:
+  projectile: {tier: reportable, mapped_instance_count: 6121}
+  grenade: {tier: reportable, mapped_instance_count: 4269}
+  mortar: {tier: reportable, mapped_instance_count: 3399}
+  cartridge: {tier: reportable, mapped_instance_count: 1111}
+  aviation_bomb: {tier: limited, mapped_instance_count: 339}
+  rocket: {tier: limited, mapped_instance_count: 84}
+  fuze: {tier: limited, mapped_instance_count: 92}
+  landmine: {tier: insufficient, mapped_instance_count: 34}
 

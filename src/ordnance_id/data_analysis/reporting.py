@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 
 from ordnance_id.data_analysis.models import DatasetReport
 from ordnance_id.data_analysis.tiers import ClassTier
+from ordnance_id.evals.schema import OrdnanceFamily
 
 
 def _save_histogram(values: list[float], title: str, xlabel: str, path: Path) -> None:
@@ -24,7 +25,8 @@ def write_report(
     report: DatasetReport,
     markdown_path: Path,
     figures_dir: Path,
-    class_tiers: dict[str, ClassTier],
+    family_tiers: dict[OrdnanceFamily, ClassTier],
+    class_mapping: dict[str, OrdnanceFamily],
 ) -> None:
     """Write tables, explicit limitations, and distribution charts."""
 
@@ -57,13 +59,18 @@ def write_report(
             widths.extend(float(width) for width, _height in split.resolutions)
             heights.extend(float(height) for _width, height in split.resolutions)
         total = sum(class_counts.values())
-        missing_tiers = sorted(set(class_counts) - class_tiers.keys())
-        if missing_tiers:
-            raise ValueError("Classes missing from class_tiers.yaml: " + ", ".join(missing_tiers))
+        missing_mapping = sorted(set(class_counts) - class_mapping.keys())
+        if missing_mapping:
+            raise ValueError(
+                "Classes missing from class_mapping.yaml: " + ", ".join(missing_mapping)
+            )
         lines.extend(["", "| Class | Instances | Percentage | Assessment |", "|---|---:|---:|---|"])
         for class_name, count in class_counts.most_common():
             percentage = count / total * 100 if total else 0.0
-            assessment = class_tiers[class_name]
+            family = class_mapping[class_name]
+            if family not in family_tiers:
+                raise ValueError(f"Family missing from class_tiers.yaml: {family}")
+            assessment = family_tiers[family]
             lines.append(f"| {class_name} | {count} | {percentage:.2f}% | {assessment} |")
         if repository.warnings:
             lines.extend(["", "Warnings:", *[f"- {warning}" for warning in repository.warnings]])

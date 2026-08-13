@@ -1,16 +1,16 @@
 # Evaluation Set v1 Statistics
 
-| Family | Samples | Source class tier(s) |
-|---|---:|---|
-| aviation_bomb | 21 | insufficient, limited |
-| cartridge | 10 | limited, reportable |
-| fuze | 14 | limited |
-| grenade | 19 | reportable |
-| landmine | 2 | insufficient |
-| mortar | 19 | reportable |
-| not_ordnance | 35 | distractor |
-| projectile | 19 | reportable |
-| rocket | 13 | insufficient, limited |
+| Family | Tier(s) | Samples | Small | Medium | Large |
+|---|---|---:|---:|---:|---:|
+| aviation_bomb | limited | 21 | 0 | 13 | 8 |
+| cartridge | reportable | 10 | 7 | 3 | 0 |
+| fuze | limited | 14 | 1 | 7 | 6 |
+| grenade | reportable | 19 | 0 | 14 | 5 |
+| landmine | insufficient | 2 | 0 | 1 | 1 |
+| mortar | reportable | 19 | 0 | 7 | 12 |
+| not_ordnance | distractor | 35 | 4 | 25 | 6 |
+| projectile | reportable | 19 | 0 | 9 | 10 |
+| rocket | limited | 13 | 0 | 12 | 1 |
 
 ## Composition and dimensions
 
@@ -32,3 +32,8 @@
 - `UXOs_3364.jpg` supplies 4 crops (>3).
 - `UXOs_3375.jpg` supplies 4 crops (>3).
 - `UXOs_3384.jpg` supplies 4 crops (>3).
+
+## Confounding factors
+
+- Seven of the 12 small crops belong to the `cartridge` family, so family effects cannot be separated from size effects in that slice.
+- The `landmine` family has only two samples; no performance claim can be made for that family.

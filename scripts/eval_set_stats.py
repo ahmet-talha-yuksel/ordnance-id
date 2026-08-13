@@ -1,6 +1,6 @@
 """Report crop-eval composition, dimensions, and source-image diversity."""
 
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import median
 
@@ -9,7 +9,7 @@ from PIL import Image
 
 from ordnance_id.data_analysis.tiers import load_class_tiers
 from ordnance_id.evals.io import load_eval_set
-from ordnance_id.evals.provenance import source_class_from_notes, source_image_from_notes
+from ordnance_id.evals.provenance import source_image_from_notes
 from ordnance_id.evals.size_buckets import size_bucket
 
 
@@ -24,6 +24,7 @@ def main(
     tiers = load_class_tiers(Path("config/class_tiers.yaml")).mapping()
     family_tiers: dict[str, set[str]] = {}
     family_counts: Counter[str] = Counter()
+    family_sizes: defaultdict[str, Counter[str]] = defaultdict(Counter)
     source_counts: Counter[str] = Counter()
     short_edges: list[int] = []
     size_counts: Counter[str] = Counter()
@@ -33,25 +34,30 @@ def main(
         source_counts[source_image_from_notes(sample.notes)] += 1
         if sample.ground_truth.is_ordnance:
             positive_count += 1
-            source_class = source_class_from_notes(sample.notes)
-            if source_class is None:
-                raise ValueError(f"Missing source class for {sample.id}")
-            family_tiers.setdefault(sample.ground_truth.family, set()).add(tiers[source_class])
+            family_tiers.setdefault(sample.ground_truth.family, set()).add(
+                tiers[sample.ground_truth.family]
+            )
         with Image.open(image_dir / sample.filename) as image:
             short_edge = min(image.size)
             short_edges.append(short_edge)
-            size_counts[size_bucket(short_edge)] += 1
+            bucket = size_bucket(short_edge)
+            size_counts[bucket] += 1
+            family_sizes[sample.ground_truth.family][bucket] += 1
     negative_count = len(eval_set.samples) - positive_count
     warnings = sorted((source, count) for source, count in source_counts.items() if count > 3)
     lines = [
         "# Evaluation Set v1 Statistics",
         "",
-        "| Family | Samples | Source class tier(s) |",
-        "|---|---:|---|",
+        "| Family | Tier(s) | Samples | Small | Medium | Large |",
+        "|---|---|---:|---:|---:|---:|",
     ]
     for family, count in sorted(family_counts.items()):
         tier_text = ", ".join(sorted(family_tiers.get(family, {"distractor"})))
-        lines.append(f"| {family} | {count} | {tier_text} |")
+        sizes = family_sizes[family]
+        lines.append(
+            f"| {family} | {tier_text} | {count} | {sizes['small']} | "
+            f"{sizes['medium']} | {sizes['large']} |"
+        )
     lines.extend(
         [
             "",
@@ -77,6 +83,17 @@ def main(
     )
     lines.extend(
         [f"- `{source}` supplies {count} crops (>3)." for source, count in warnings] or ["- None."]
+    )
+    lines.extend(
+        [
+            "",
+            "## Confounding factors",
+            "",
+            "- Seven of the 12 small crops belong to the `cartridge` family, so family effects "
+            "cannot be separated from size effects in that slice.",
+            "- The `landmine` family has only two samples; no performance claim can be made for "
+            "that family.",
+        ]
     )
     text = "\n".join(lines) + "\n"
     output.write_text(text, encoding="utf-8")

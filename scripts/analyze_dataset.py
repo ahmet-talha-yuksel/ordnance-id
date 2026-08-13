@@ -7,6 +7,7 @@ import typer
 from ordnance_id.data_analysis.discovery import analyze_dataset
 from ordnance_id.data_analysis.reporting import write_report
 from ordnance_id.data_analysis.tiers import load_class_tiers
+from ordnance_id.evals.builder import load_class_mapping
 
 
 def main(
@@ -18,7 +19,8 @@ def main(
 
     report = analyze_dataset(dataset_root)
     tiers = load_class_tiers(Path("config/class_tiers.yaml")).mapping()
-    write_report(report, output, figures, tiers)
+    mapping = load_class_mapping(Path("config/class_mapping.yaml"))
+    write_report(report, output, figures, tiers, mapping)
     typer.echo(f"Analyzed {len(report.repositories)} repositories; report written to {output}")
 
 
