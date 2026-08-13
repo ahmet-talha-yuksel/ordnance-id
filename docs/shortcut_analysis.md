@@ -98,11 +98,46 @@ Observations: 152; positive: 117; negative: 35.
 - n: 35
 - Counts: `{'unclear': 26, 'irregular': 8, 'boxy': 1}`
 
-## Suspected shortcuts
+## Axis-specific assessment
 
-Flag rule: positive/negative TVD ≥ 0.50 and either family MI ≥ 0.10 or size-bucket MI ≥ 0.05.
+The two axes are evaluated independently. An is_ordnance-axis flag does not automatically reject a field from family discrimination.
 
-- `surface_condition` — TVD=0.684, family MI=0.3466, size MI=0.0562
-- `looks_manufactured` — TVD=0.740, family MI=0.0701, size MI=0.0664
-- `body_shape` — TVD=0.692, family MI=0.4920, size MI=0.0527
+| Field | is_ordnance axis | Family axis | Numeric basis |
+|---|---|---|---|
+| surface_condition | suspected shortcut | suspected shortcut | TVD=0.684; family MI=0.3466; size MI=0.0562 |
+| looks_manufactured | suspected shortcut | not discriminative | TVD=0.740; family MI=0.0701; size MI=0.0664 |
+| body_shape | suspected shortcut | physically defensible family signal | TVD=0.692; family MI=0.4920; size MI=0.0527 |
+
+### body_shape physical-pattern check (positive families)
+
+Percentages use each positive family's full n; omitted shapes are 0%.
+
+| Family | n | Ogive | Cylindrical | Spherical | Boxy | Irregular | Unclear |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| aviation_bomb | 21 | 23.8% | 47.6% | 0.0% | 0.0% | 0.0% | 23.8% |
+| cartridge | 10 | 0.0% | 40.0% | 0.0% | 10.0% | 10.0% | 40.0% |
+| fuze | 14 | 0.0% | 21.4% | 0.0% | 0.0% | 57.1% | 7.1% |
+| grenade | 19 | 10.5% | 21.1% | 10.5% | 0.0% | 42.1% | 15.8% |
+| landmine | 2 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 100.0% |
+| mortar | 19 | 68.4% | 10.5% | 5.3% | 0.0% | 10.5% | 0.0% |
+| projectile | 19 | 31.6% | 68.4% | 0.0% | 0.0% | 0.0% | 0.0% |
+| rocket | 13 | 23.1% | 46.2% | 0.0% | 0.0% | 0.0% | 7.7% |
+
+Positive-family concentrations: projectile is 68.4% cylindrical and 31.6% ogive; mortar is 68.4% ogive; grenade is 42.1% irregular and 10.5% spherical; fuze is 57.1% irregular. These family-varying geometric concentrations support physical use on the family axis.
+
+Negative `body_shape`: `{'unclear': 26, 'irregular': 8, 'boxy': 1}`. The concentration is 26/35 unclear and 8/35 irregular, so the field remains suspect for the is_ordnance axis.
+
+## Suspected shortcuts — is_ordnance axis
+
+- `surface_condition`
+- `looks_manufactured`
+- `body_shape`
+
+No tested texture/form field is accepted as a standalone is_ordnance gate. The remaining non-shortcut signals are positive-only structural cues: `fins_or_tail_visible=True`, `fuze_visible=True`, and `driving_band_visible=True` (53/117 positives, 0/35 negatives in union). Their absence is not negative evidence; all other cases require confidence-based abstention.
+
+## Suspected shortcuts — family axis
+
+- `surface_condition`
+
+`body_shape` is accepted only on the family axis. `looks_manufactured` is not shortcut-listed on this axis, but its family MI=0.0701 is below the feature selection threshold.
 
