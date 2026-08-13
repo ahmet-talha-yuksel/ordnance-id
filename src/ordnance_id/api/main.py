@@ -5,9 +5,11 @@ from typing import Annotated, Any
 from fastapi import Depends, FastAPI
 
 from ordnance_id import __version__
+from ordnance_id.api.routes.ingest import router as ingest_router
 from ordnance_id.config import Settings, get_settings
 
 app = FastAPI(title="ORDNANCE-ID", version=__version__)
+app.include_router(ingest_router)
 
 
 @app.get("/health")

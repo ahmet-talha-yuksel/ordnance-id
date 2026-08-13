@@ -3,7 +3,7 @@
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import SecretStr
+from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -21,8 +21,14 @@ class Settings(BaseSettings):
     FAST_MODEL: str
     DATABASE_URL: str
     QDRANT_URL: str
-    CONFIDENCE_THRESHOLD: float = 0.7
-    MIN_IMAGE_QUALITY_SCORE: float = 0.5
+    CONFIDENCE_THRESHOLD: float = Field(default=0.7, ge=0.0, le=1.0)
+    MIN_IMAGE_QUALITY_SCORE: float = Field(default=0.5, ge=0.0, le=1.0)
+    MIN_BLUR_SCORE: float = Field(default=0.25, ge=0.0, le=1.0)
+    BLUR_VARIANCE_REFERENCE: float = Field(default=500.0, gt=0.0)
+    MIN_BRIGHTNESS_SCORE: float = Field(default=0.25, ge=0.0, le=1.0)
+    MIN_IMAGE_WIDTH: int = Field(default=640, gt=0)
+    MIN_IMAGE_HEIGHT: int = Field(default=480, gt=0)
+    MAX_UPLOAD_BYTES: int = Field(default=10 * 1024 * 1024, gt=0)
     KEEP_EXIF_GPS: bool = False
     LOG_LEVEL: str = "INFO"
 
@@ -32,4 +38,3 @@ def get_settings() -> Settings:
     """Return the process-wide validated settings instance."""
 
     return Settings()  # type: ignore[call-arg]
-
