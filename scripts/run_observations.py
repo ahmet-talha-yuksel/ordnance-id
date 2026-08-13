@@ -108,6 +108,7 @@ async def _run(
         provider, prompt_path=prompt_path, max_edge_px=settings.VISION_MAX_EDGE_PX
     )
     cache = StructuredDiskCache(cache_dir)
+    family_tiers = load_class_tiers(Path("config/class_tiers.yaml")).mapping()
     try:
         ledger = ObservationLedger(output, resume=resume)
     except FileExistsError as error:
@@ -178,6 +179,7 @@ async def _run(
             record = ObservationRecord(
                 sample_id=sample.id,
                 family=sample.ground_truth.family,
+                tier=family_tiers.get(sample.ground_truth.family, "not_applicable"),
                 size_bucket=bucket,
                 observation=observation,
                 duration_ms=duration_ms,

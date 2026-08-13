@@ -2,10 +2,12 @@
 
 from collections import Counter
 from pathlib import Path
+from typing import Literal
 
 from PIL import Image
 from pydantic import BaseModel, Field
 
+from ordnance_id.data_analysis.tiers import ClassTier
 from ordnance_id.evals.io import load_eval_set
 from ordnance_id.evals.schema import OrdnanceFamily
 from ordnance_id.evals.size_buckets import SizeBucket, size_bucket
@@ -18,6 +20,7 @@ class ObservationRecord(BaseModel):
 
     sample_id: str
     family: OrdnanceFamily
+    tier: ClassTier | Literal["not_applicable"] | None = None
     size_bucket: SizeBucket
     observation: OrdnanceObservation | None = None
     duration_ms: float = Field(ge=0)
