@@ -7,6 +7,7 @@ from pydantic import BaseModel
 from ordnance_id.gateway.base import Message
 from ordnance_id.gateway.providers.gemini import GeminiProvider
 from ordnance_id.gateway.rate_limit import TokenBucket
+from ordnance_id.gateway.schema_adapt import to_gemini_schema
 
 
 class StructuredResult(BaseModel):
@@ -50,7 +51,7 @@ async def test_gemini_native_schema_images_and_validation_retry() -> None:
     assert len(models.calls) == 2
     config = models.calls[0]["config"]
     assert config.response_mime_type == "application/json"
-    assert config.response_schema == StructuredResult.model_json_schema()
+    assert config.response_schema == to_gemini_schema(StructuredResult)
     parts = models.calls[0]["contents"].parts
     assert parts[1].inline_data.mime_type == "image/jpeg"
     assert parts[1].inline_data.data == b"image bytes"

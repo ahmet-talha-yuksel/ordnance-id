@@ -1,6 +1,7 @@
 """Implement Gemini native structured output behind the neutral gateway."""
 
 import base64
+import json
 from collections.abc import Sequence
 from time import perf_counter
 from typing import Any, cast
@@ -12,6 +13,7 @@ from pydantic import ValidationError
 from ordnance_id.gateway.base import ImageInput, Message, SchemaT
 from ordnance_id.gateway.metrics import CallMetrics
 from ordnance_id.gateway.rate_limit import TokenBucket, call_with_backoff
+from ordnance_id.gateway.schema_adapt import to_gemini_schema
 
 
 class GeminiProvider:
@@ -104,7 +106,7 @@ class GeminiProvider:
                     config=types.GenerateContentConfig(
                         temperature=0,
                         response_mime_type="application/json",
-                        response_schema=schema.model_json_schema(),
+                        response_schema=to_gemini_schema(schema),
                     ),
                 )
 
@@ -115,7 +117,7 @@ class GeminiProvider:
             input_tokens += int(getattr(usage, "prompt_token_count", 0) or 0)
             output_tokens += int(getattr(usage, "candidates_token_count", 0) or 0)
             try:
-                result = schema.model_validate_json(cast(str, response.text))
+                result = schema.model_validate(json.loads(cast(str, response.text)))
                 self._last_metrics = CallMetrics(
                     provider="gemini",
                     model=self._model,

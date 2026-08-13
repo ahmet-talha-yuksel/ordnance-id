@@ -82,3 +82,4 @@ or operationally validated.
 - [ADR-004: EXIF privacy by default](docs/decisions/ADR-004-exif-privacy.md)
 - [ADR-005: No project-specific training](docs/decisions/ADR-005-no-training.md)
 - [ADR-006: Gemini free tier for initial evaluation](docs/decisions/ADR-006-provider-choice.md)
+- [ADR-007: Provider schema dialects](docs/decisions/ADR-007-schema-dialects.md)
