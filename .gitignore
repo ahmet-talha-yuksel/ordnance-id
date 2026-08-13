@@ -189,6 +189,7 @@ __pycache__/
 data/raw/*
 !data/raw/.gitkeep
 data/processed/
+data/eval_images/
 *.pt
 *.gguf
 *.onnx

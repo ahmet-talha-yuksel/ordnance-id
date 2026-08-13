@@ -1,0 +1,14 @@
+# Explicit CTX-UXO source labels. The builder fails if the dataset contains any unlisted class.
+classes:
+  AntiSubmarine Bomb: aviation_bomb
+  Aviation Bomb: aviation_bomb
+  Cartridge: cartridge
+  Cartridge Magazine: cartridge
+  Fuse: fuze
+  Grenade: grenade
+  LandMine: landmine
+  Mortar Bomb: mortar
+  Projectile: projectile
+  RPG: rocket
+  Rocket: rocket
+  Sea Mine: landmine

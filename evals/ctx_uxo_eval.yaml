@@ -1,0 +1,2355 @@
+version: '2026-08-13'
+description: Balanced CTX-UXO test-split subset; source labels retained without relabeling.
+samples:
+- id: eval_001
+  filename: eval_001.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_002
+  filename: eval_002.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_003
+  filename: eval_003.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_004
+  filename: eval_004.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_005
+  filename: eval_005.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_006
+  filename: eval_006.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_007
+  filename: eval_007.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_008
+  filename: eval_008.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_009
+  filename: eval_009.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_010
+  filename: eval_010.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_011
+  filename: eval_011.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_012
+  filename: eval_012.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_013
+  filename: eval_013.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_014
+  filename: eval_014.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_015
+  filename: eval_015.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_016
+  filename: eval_016.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_017
+  filename: eval_017.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_018
+  filename: eval_018.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_019
+  filename: eval_019.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_020
+  filename: eval_020.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_021
+  filename: eval_021.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: landmine
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Sea Mine; no manual relabeling.'
+- id: eval_022
+  filename: eval_022.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_023
+  filename: eval_023.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_024
+  filename: eval_024.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_025
+  filename: eval_025.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_026
+  filename: eval_026.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_027
+  filename: eval_027.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_028
+  filename: eval_028.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_029
+  filename: eval_029.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_030
+  filename: eval_030.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_031
+  filename: eval_031.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_032
+  filename: eval_032.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_033
+  filename: eval_033.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_034
+  filename: eval_034.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_035
+  filename: eval_035.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_036
+  filename: eval_036.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_037
+  filename: eval_037.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_038
+  filename: eval_038.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_039
+  filename: eval_039.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_040
+  filename: eval_040.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_041
+  filename: eval_041.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_042
+  filename: eval_042.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_043
+  filename: eval_043.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_044
+  filename: eval_044.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_045
+  filename: eval_045.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_046
+  filename: eval_046.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_047
+  filename: eval_047.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_048
+  filename: eval_048.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_049
+  filename: eval_049.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_050
+  filename: eval_050.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_051
+  filename: eval_051.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_052
+  filename: eval_052.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_053
+  filename: eval_053.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_054
+  filename: eval_054.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_055
+  filename: eval_055.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_056
+  filename: eval_056.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_057
+  filename: eval_057.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_058
+  filename: eval_058.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_059
+  filename: eval_059.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_060
+  filename: eval_060.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_061
+  filename: eval_061.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_062
+  filename: eval_062.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_063
+  filename: eval_063.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_064
+  filename: eval_064.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_065
+  filename: eval_065.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_066
+  filename: eval_066.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: mortar
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+- id: eval_067
+  filename: eval_067.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_068
+  filename: eval_068.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_069
+  filename: eval_069.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_070
+  filename: eval_070.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_071
+  filename: eval_071.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_072
+  filename: eval_072.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_073
+  filename: eval_073.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_074
+  filename: eval_074.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_075
+  filename: eval_075.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_076
+  filename: eval_076.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_077
+  filename: eval_077.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_078
+  filename: eval_078.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: grenade
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Grenade; no manual relabeling.'
+- id: eval_079
+  filename: eval_079.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_080
+  filename: eval_080.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_081
+  filename: eval_081.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_082
+  filename: eval_082.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_083
+  filename: eval_083.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_084
+  filename: eval_084.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Projectile; no manual relabeling.'
+- id: eval_085
+  filename: eval_085.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Cartridge; no manual relabeling.'
+- id: eval_086
+  filename: eval_086.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_087
+  filename: eval_087.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_088
+  filename: eval_088.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_089
+  filename: eval_089.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_090
+  filename: eval_090.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_091
+  filename: eval_091.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Cartridge; no manual relabeling.'
+- id: eval_092
+  filename: eval_092.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: rocket
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: RPG; no manual relabeling.'
+- id: eval_093
+  filename: eval_093.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_094
+  filename: eval_094.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_095
+  filename: eval_095.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_096
+  filename: eval_096.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_097
+  filename: eval_097.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_098
+  filename: eval_098.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_099
+  filename: eval_099.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_100
+  filename: eval_100.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_101
+  filename: eval_101.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_102
+  filename: eval_102.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: rocket
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: RPG; no manual relabeling.'
+- id: eval_103
+  filename: eval_103.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Cartridge; no manual relabeling.'
+- id: eval_104
+  filename: eval_104.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Cartridge; no manual relabeling.'
+- id: eval_105
+  filename: eval_105.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Fuse; no manual relabeling.'
+- id: eval_106
+  filename: eval_106.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_107
+  filename: eval_107.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Fuse; no manual relabeling.'
+- id: eval_108
+  filename: eval_108.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Cartridge; no manual relabeling.'
+- id: eval_109
+  filename: eval_109.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_110
+  filename: eval_110.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+- id: eval_111
+  filename: eval_111.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Fuse; no manual relabeling.'
+- id: eval_112
+  filename: eval_112.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: rocket
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'Source class: Rocket; no manual relabeling.'
