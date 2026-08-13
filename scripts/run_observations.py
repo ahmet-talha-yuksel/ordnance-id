@@ -58,7 +58,7 @@ async def _run(
     if not yes and not typer.confirm("Proceed with provider calls?"):
         raise typer.Abort()
     provider = get_provider(settings)
-    analyzer = VisionAnalyzer(provider)
+    analyzer = VisionAnalyzer(provider, max_edge_px=settings.VISION_MAX_EDGE_PX)
     cache = StructuredDiskCache(cache_dir)
     completed: set[str] = set()
     if output.exists():

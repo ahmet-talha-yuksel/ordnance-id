@@ -2712,8 +2712,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'source_image=UXOs_3487.jpg; sampled_bbox_xywh={''x'': 2019.0, ''y'': 571.0,
-    ''width'': 303.0, ''height'': 125.0}; seed=42; unannotated background is not guaranteed
+  notes: 'source_image=UXOs_3297.jpg; sampled_bbox_xywh={''x'': 1928.0, ''y'': 2438.0,
+    ''width'': 148.0, ''height'': 127.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
 - id: eval_120
   filename: eval_120.jpg
@@ -2736,35 +2736,11 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'source_image=UXOs_3297.jpg; sampled_bbox_xywh={''x'': 1928.0, ''y'': 2438.0,
-    ''width'': 148.0, ''height'': 127.0}; seed=42; unannotated background is not guaranteed
-    ordnance-free'
-- id: eval_121
-  filename: eval_121.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: false
-    family: not_ordnance
-    confidence_of_label: medium
-    label_rationale: background region with no annotated ordnance; absence of annotation
-      is not a guarantee of absence
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
   notes: 'source_image=UXOs_3287.jpg; sampled_bbox_xywh={''x'': 26.0, ''y'': 1001.0,
     ''width'': 1971.0, ''height'': 416.0}; seed=42; unannotated background is not
     guaranteed ordnance-free'
-- id: eval_122
-  filename: eval_122.jpg
+- id: eval_121
+  filename: eval_121.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2787,8 +2763,8 @@ samples:
   notes: 'source_image=UXOs_3230.jpg; sampled_bbox_xywh={''x'': 410.0, ''y'': 1692.0,
     ''width'': 902.0, ''height'': 313.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_123
-  filename: eval_123.jpg
+- id: eval_122
+  filename: eval_122.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2811,8 +2787,8 @@ samples:
   notes: 'source_image=UXOs_3330.jpg; sampled_bbox_xywh={''x'': 967.0, ''y'': 823.0,
     ''width'': 914.0, ''height'': 510.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_124
-  filename: eval_124.jpg
+- id: eval_123
+  filename: eval_123.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2835,8 +2811,8 @@ samples:
   notes: 'source_image=UXOs_3229.jpg; sampled_bbox_xywh={''x'': 152.0, ''y'': 358.0,
     ''width'': 436.0, ''height'': 581.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_125
-  filename: eval_125.jpg
+- id: eval_124
+  filename: eval_124.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2859,8 +2835,8 @@ samples:
   notes: 'source_image=UXOs_3288.jpg; sampled_bbox_xywh={''x'': 76.0, ''y'': 18.0,
     ''width'': 448.0, ''height'': 1121.0}; seed=42; unannotated background is not
     guaranteed ordnance-free'
-- id: eval_126
-  filename: eval_126.jpg
+- id: eval_125
+  filename: eval_125.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2883,8 +2859,8 @@ samples:
   notes: 'source_image=UXOs_3471.jpg; sampled_bbox_xywh={''x'': 394.0, ''y'': 922.0,
     ''width'': 353.0, ''height'': 342.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_127
-  filename: eval_127.jpg
+- id: eval_126
+  filename: eval_126.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2907,8 +2883,8 @@ samples:
   notes: 'source_image=UXOs_3330.jpg; sampled_bbox_xywh={''x'': 1497.0, ''y'': 1879.0,
     ''width'': 478.0, ''height'': 806.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_128
-  filename: eval_128.jpg
+- id: eval_127
+  filename: eval_127.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2931,8 +2907,8 @@ samples:
   notes: 'source_image=UXOs_3255.jpg; sampled_bbox_xywh={''x'': 381.0, ''y'': 28.0,
     ''width'': 914.0, ''height'': 510.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_129
-  filename: eval_129.jpg
+- id: eval_128
+  filename: eval_128.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2955,8 +2931,8 @@ samples:
   notes: 'source_image=UXOs_3189.jpg; sampled_bbox_xywh={''x'': 1251.0, ''y'': 2616.0,
     ''width'': 353.0, ''height'': 130.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_130
-  filename: eval_130.jpg
+- id: eval_129
+  filename: eval_129.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2979,8 +2955,8 @@ samples:
   notes: 'source_image=UXOs_3402.jpg; sampled_bbox_xywh={''x'': 195.0, ''y'': 378.0,
     ''width'': 528.0, ''height'': 965.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_131
-  filename: eval_131.jpg
+- id: eval_130
+  filename: eval_130.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3003,8 +2979,8 @@ samples:
   notes: 'source_image=UXOs_2998.jpg; sampled_bbox_xywh={''x'': 98.0, ''y'': 482.0,
     ''width'': 942.0, ''height'': 530.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_132
-  filename: eval_132.jpg
+- id: eval_131
+  filename: eval_131.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3027,8 +3003,8 @@ samples:
   notes: 'source_image=UXOs_3233.jpg; sampled_bbox_xywh={''x'': 2735.0, ''y'': 242.0,
     ''width'': 289.0, ''height'': 503.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_133
-  filename: eval_133.jpg
+- id: eval_132
+  filename: eval_132.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3051,8 +3027,8 @@ samples:
   notes: 'source_image=UXOs_3506.jpg; sampled_bbox_xywh={''x'': 1440.0, ''y'': 1273.0,
     ''width'': 395.0, ''height'': 181.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_134
-  filename: eval_134.jpg
+- id: eval_133
+  filename: eval_133.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3075,8 +3051,8 @@ samples:
   notes: 'source_image=UXOs_3374.jpg; sampled_bbox_xywh={''x'': 1437.0, ''y'': 3857.0,
     ''width'': 212.0, ''height'': 177.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_135
-  filename: eval_135.jpg
+- id: eval_134
+  filename: eval_134.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3099,8 +3075,8 @@ samples:
   notes: 'source_image=UXOs_3509.jpg; sampled_bbox_xywh={''x'': 1172.0, ''y'': 2198.0,
     ''width'': 685.0, ''height'': 412.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_136
-  filename: eval_136.jpg
+- id: eval_135
+  filename: eval_135.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3123,6 +3099,30 @@ samples:
   notes: 'source_image=UXOs_3444.jpg; sampled_bbox_xywh={''x'': 841.0, ''y'': 1468.0,
     ''width'': 281.0, ''height'': 161.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
+- id: eval_136
+  filename: eval_136.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3048.jpg; sampled_bbox_xywh={''x'': 1080.0, ''y'': 1051.0,
+    ''width'': 153.0, ''height'': 212.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
 - id: eval_137
   filename: eval_137.jpg
   source_url: https://zenodo.org/records/17052675
@@ -3144,7 +3144,7 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'source_image=UXOs_3048.jpg; sampled_bbox_xywh={''x'': 1080.0, ''y'': 1051.0,
+  notes: 'source_image=UXOs_3417.jpg; sampled_bbox_xywh={''x'': 1154.0, ''y'': 118.0,
     ''width'': 153.0, ''height'': 212.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
 - id: eval_138
@@ -3168,8 +3168,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'source_image=UXOs_3417.jpg; sampled_bbox_xywh={''x'': 1154.0, ''y'': 118.0,
-    ''width'': 153.0, ''height'': 212.0}; seed=42; unannotated background is not guaranteed
+  notes: 'source_image=UXOs_3397.jpg; sampled_bbox_xywh={''x'': 3.0, ''y'': 446.0,
+    ''width'': 401.0, ''height'': 200.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
 - id: eval_139
   filename: eval_139.jpg
@@ -3192,35 +3192,11 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'source_image=UXOs_3397.jpg; sampled_bbox_xywh={''x'': 3.0, ''y'': 446.0,
-    ''width'': 401.0, ''height'': 200.0}; seed=42; unannotated background is not guaranteed
-    ordnance-free'
-- id: eval_140
-  filename: eval_140.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: false
-    family: not_ordnance
-    confidence_of_label: medium
-    label_rationale: background region with no annotated ordnance; absence of annotation
-      is not a guarantee of absence
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
   notes: 'source_image=UXOs_3057.jpg; sampled_bbox_xywh={''x'': 246.0, ''y'': 4.0,
     ''width'': 724.0, ''height'': 2040.0}; seed=42; unannotated background is not
     guaranteed ordnance-free'
-- id: eval_141
-  filename: eval_141.jpg
+- id: eval_140
+  filename: eval_140.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3243,8 +3219,8 @@ samples:
   notes: 'source_image=UXOs_3176.jpg; sampled_bbox_xywh={''x'': 34.0, ''y'': 860.0,
     ''width'': 1054.0, ''height'': 511.0}; seed=42; unannotated background is not
     guaranteed ordnance-free'
-- id: eval_142
-  filename: eval_142.jpg
+- id: eval_141
+  filename: eval_141.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3267,8 +3243,8 @@ samples:
   notes: 'source_image=UXOs_3375.jpg; sampled_bbox_xywh={''x'': 3133.0, ''y'': 918.0,
     ''width'': 395.0, ''height'': 181.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_143
-  filename: eval_143.jpg
+- id: eval_142
+  filename: eval_142.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3291,8 +3267,8 @@ samples:
   notes: 'source_image=UXOs_3426.jpg; sampled_bbox_xywh={''x'': 776.0, ''y'': 3372.0,
     ''width'': 436.0, ''height'': 581.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_144
-  filename: eval_144.jpg
+- id: eval_143
+  filename: eval_143.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3315,8 +3291,8 @@ samples:
   notes: 'source_image=UXOs_3227.jpg; sampled_bbox_xywh={''x'': 1886.0, ''y'': 1417.0,
     ''width'': 141.0, ''height'': 109.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_145
-  filename: eval_145.jpg
+- id: eval_144
+  filename: eval_144.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3339,8 +3315,8 @@ samples:
   notes: 'source_image=UXOs_3026.jpg; sampled_bbox_xywh={''x'': 612.0, ''y'': 2752.0,
     ''width'': 1191.0, ''height'': 1742.0}; seed=42; unannotated background is not
     guaranteed ordnance-free'
-- id: eval_146
-  filename: eval_146.jpg
+- id: eval_145
+  filename: eval_145.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3363,8 +3339,8 @@ samples:
   notes: 'source_image=UXOs_3041.jpg; sampled_bbox_xywh={''x'': 1516.0, ''y'': 181.0,
     ''width'': 141.0, ''height'': 109.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_147
-  filename: eval_147.jpg
+- id: eval_146
+  filename: eval_146.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3387,32 +3363,8 @@ samples:
   notes: 'source_image=UXOs_3214.jpg; sampled_bbox_xywh={''x'': 442.0, ''y'': 231.0,
     ''width'': 1667.0, ''height'': 771.0}; seed=42; unannotated background is not
     guaranteed ordnance-free'
-- id: eval_148
-  filename: eval_148.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: false
-    family: not_ordnance
-    confidence_of_label: medium
-    label_rationale: background region with no annotated ordnance; absence of annotation
-      is not a guarantee of absence
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'source_image=UXOs_3320.jpg; sampled_bbox_xywh={''x'': 1236.0, ''y'': 293.0,
-    ''width'': 771.0, ''height'': 348.0}; seed=42; unannotated background is not guaranteed
-    ordnance-free'
-- id: eval_149
-  filename: eval_149.jpg
+- id: eval_147
+  filename: eval_147.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3435,8 +3387,8 @@ samples:
   notes: 'source_image=UXOs_3476.jpg; sampled_bbox_xywh={''x'': 3478.0, ''y'': 461.0,
     ''width'': 771.0, ''height'': 348.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_150
-  filename: eval_150.jpg
+- id: eval_148
+  filename: eval_148.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3459,8 +3411,8 @@ samples:
   notes: 'source_image=UXOs_3302.jpg; sampled_bbox_xywh={''x'': 31.0, ''y'': 867.0,
     ''width'': 720.0, ''height'': 1036.0}; seed=42; unannotated background is not
     guaranteed ordnance-free'
-- id: eval_151
-  filename: eval_151.jpg
+- id: eval_149
+  filename: eval_149.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3483,8 +3435,8 @@ samples:
   notes: 'source_image=UXOs_3186.jpg; sampled_bbox_xywh={''x'': 240.0, ''y'': 1961.0,
     ''width'': 794.0, ''height'': 781.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'
-- id: eval_152
-  filename: eval_152.jpg
+- id: eval_150
+  filename: eval_150.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -3506,4 +3458,52 @@ samples:
     distant_or_small_in_frame: false
   notes: 'source_image=UXOs_3218.jpg; sampled_bbox_xywh={''x'': 298.0, ''y'': 66.0,
     ''width'': 794.0, ''height'': 781.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_151
+  filename: eval_151.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3164.jpg; sampled_bbox_xywh={''x'': 45.0, ''y'': 693.0,
+    ''width'': 2040.0, ''height'': 387.0}; seed=42; unannotated background is not
+    guaranteed ordnance-free'
+- id: eval_152
+  filename: eval_152.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3180.jpg; sampled_bbox_xywh={''x'': 1110.0, ''y'': 2628.0,
+    ''width'': 377.0, ''height'': 160.0}; seed=42; unannotated background is not guaranteed
     ordnance-free'

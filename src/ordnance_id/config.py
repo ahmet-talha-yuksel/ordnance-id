@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: SecretStr | None = None
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     VISION_MODEL: str
+    VISION_MAX_EDGE_PX: int = Field(default=768, gt=0)
     TEXT_MODEL: str
     FAST_MODEL: str
     DATABASE_URL: str

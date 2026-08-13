@@ -1,4 +1,8 @@
+import base64
+from io import BytesIO
 from pathlib import Path
+
+from PIL import Image
 
 from ordnance_id.gateway.base import ImageInput, Message, SchemaT
 from ordnance_id.gateway.metrics import CallMetrics
@@ -8,6 +12,8 @@ from tests.ingest_helpers import image_bytes
 
 
 class FakeGateway:
+    received_size: tuple[int, int] | None = None
+
     @property
     def last_metrics(self) -> CallMetrics | None:
         return None
@@ -30,6 +36,8 @@ class FakeGateway:
         images: list[ImageInput] | None = None,
     ) -> SchemaT:
         assert images and images[0]["media_type"] == "image/jpeg"
+        with Image.open(BytesIO(base64.b64decode(images[0]["data"]))) as image:
+            self.received_size = image.size
         return schema.model_validate(
             {
                 "body_shape": "irregular",
@@ -58,3 +66,17 @@ async def test_analyzer_clears_length_without_scale(tmp_path: Path) -> None:
     assert isinstance(observation, OrdnanceObservation)
     assert observation.estimated_length_cm is None
     assert "estimated_length_cm" in observation.unclear_features
+
+
+async def test_analyzer_downscales_only_oversized_images(tmp_path: Path) -> None:
+    prompt = tmp_path / "observe_v1.md"
+    prompt.write_text("Observe only visible features.")
+    gateway = FakeGateway()
+    analyzer = VisionAnalyzer(gateway, prompt_path=prompt, max_edge_px=768)
+
+    await analyzer.observe(image_bytes(width=1200, height=600))
+    assert gateway.received_size == (768, 384)
+
+    original = image_bytes(width=400, height=200)
+    await analyzer.observe(original)
+    assert gateway.received_size == (400, 200)

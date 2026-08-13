@@ -10,6 +10,7 @@ from PIL import Image
 from ordnance_id.data_analysis.tiers import load_class_tiers
 from ordnance_id.evals.io import load_eval_set
 from ordnance_id.evals.provenance import source_class_from_notes, source_image_from_notes
+from ordnance_id.evals.size_buckets import size_bucket
 
 
 def main(
@@ -25,6 +26,7 @@ def main(
     family_counts: Counter[str] = Counter()
     source_counts: Counter[str] = Counter()
     short_edges: list[int] = []
+    size_counts: Counter[str] = Counter()
     positive_count = 0
     for sample in eval_set.samples:
         family_counts[sample.ground_truth.family] += 1
@@ -36,7 +38,9 @@ def main(
                 raise ValueError(f"Missing source class for {sample.id}")
             family_tiers.setdefault(sample.ground_truth.family, set()).add(tiers[source_class])
         with Image.open(image_dir / sample.filename) as image:
-            short_edges.append(min(image.size))
+            short_edge = min(image.size)
+            short_edges.append(short_edge)
+            size_counts[size_bucket(short_edge)] += 1
     negative_count = len(eval_set.samples) - positive_count
     warnings = sorted((source, count) for source, count in source_counts.items() if count > 3)
     lines = [
@@ -58,6 +62,14 @@ def main(
             "- Short edge, min/median/max: "
             f"{min(short_edges)} / {median(short_edges):.1f} / {max(short_edges)} px",
             f"- Distinct source images: {len(source_counts)}",
+            "",
+            "## Size buckets",
+            "",
+            "| Bucket | Definition | Samples |",
+            "|---|---|---:|",
+            f"| small | short edge <150 px | {size_counts['small']} |",
+            f"| medium | short edge 150–600 px | {size_counts['medium']} |",
+            f"| large | short edge >600 px | {size_counts['large']} |",
             "",
             "## Source concentration warnings",
             "",

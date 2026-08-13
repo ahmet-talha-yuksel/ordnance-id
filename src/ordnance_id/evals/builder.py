@@ -116,6 +116,32 @@ def intersection_over_union(first: Box, second: Box) -> float:
     return intersection / union if union else 0.0
 
 
+def boxes_intersect(first: Box, second: Box) -> bool:
+    """Return whether two boxes share any positive-area region."""
+
+    return (
+        min(first.x + first.width, second.x + second.width) > max(first.x, second.x)
+        and min(first.y + first.height, second.y + second.height) > max(first.y, second.y)
+    )
+
+
+def dilate_box(box: Box, margin: float = 8.0) -> Box:
+    """Expand an annotation on all sides to create a strict exclusion region."""
+
+    return Box(
+        x=box.x - margin,
+        y=box.y - margin,
+        width=box.width + margin * 2,
+        height=box.height + margin * 2,
+    )
+
+
+def is_strictly_disjoint(candidate: Box, annotations: list[Box], margin: float = 8.0) -> bool:
+    """Require a candidate to avoid the union of margin-dilated annotations."""
+
+    return not any(boxes_intersect(candidate, dilate_box(box, margin)) for box in annotations)
+
+
 def _select_positives(
     annotations: list[Annotation],
     tiers: dict[str, ClassTier],
@@ -233,9 +259,7 @@ def build_crop_eval_set(
                 width=width,
                 height=height,
             )
-            if any(
-                intersection_over_union(box, annotated) > 0.02 for annotated in by_image[image_path]
-            ):
+            if not is_strictly_disjoint(box, by_image[image_path], margin=8.0):
                 continue
             crop = image.crop((box.x, box.y, box.x + box.width, box.y + box.height)).convert("RGB")
             if float(np.asarray(crop).var()) < 25.0:

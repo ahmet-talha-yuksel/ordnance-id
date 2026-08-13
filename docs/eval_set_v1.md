@@ -19,6 +19,14 @@
 - Short edge, min/median/max: 109 / 442.0 / 2044 px
 - Distinct source images: 117
 
+## Size buckets
+
+| Bucket | Definition | Samples |
+|---|---|---:|
+| small | short edge <150 px | 12 |
+| medium | short edge 150–600 px | 91 |
+| large | short edge >600 px | 49 |
+
 ## Source concentration warnings
 
 - `UXOs_3364.jpg` supplies 4 crops (>3).

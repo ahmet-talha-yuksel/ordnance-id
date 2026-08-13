@@ -3,9 +3,11 @@
 from collections import Counter
 from pathlib import Path
 
+from PIL import Image
 from pydantic import BaseModel, Field
 
 from ordnance_id.evals.io import load_eval_set
+from ordnance_id.evals.size_buckets import size_bucket
 from ordnance_id.gateway.metrics import CallMetrics
 from ordnance_id.vision.schema import OrdnanceObservation
 
@@ -22,12 +24,19 @@ class ObservationRecord(BaseModel):
 
 
 def write_observation_report(
-    records: list[ObservationRecord], eval_path: Path, output: Path
+    records: list[ObservationRecord],
+    eval_path: Path,
+    output: Path,
+    image_dir: Path = Path("data/eval_images"),
 ) -> None:
     """Summarize completeness and consistency without claiming identification accuracy."""
 
     eval_set = load_eval_set(eval_path)
     truth = {sample.id: sample.ground_truth for sample in eval_set.samples}
+    buckets: dict[str, str] = {}
+    for sample in eval_set.samples:
+        with Image.open(image_dir / sample.filename) as image:
+            buckets[sample.id] = size_bucket(min(image.size))
     successful = [
         (record, record.observation) for record in records if record.observation is not None
     ]
@@ -79,6 +88,26 @@ def write_observation_report(
         and not truth[record.sample_id].is_ordnance
     ]
     manufactured = Counter(observation.looks_manufactured for _record, observation in negatives)
+    lines.extend(
+        [
+            "",
+            "## Results by size bucket",
+            "",
+            "| Bucket | Records | Successful | Quality insufficient |",
+            "|---|---:|---:|---:|",
+        ]
+    )
+    for bucket in ("small", "medium", "large"):
+        bucket_records = [record for record in records if buckets.get(record.sample_id) == bucket]
+        bucket_success = [record for record in bucket_records if record.observation is not None]
+        bucket_poor = sum(
+            not record.observation.image_quality_sufficient
+            for record in bucket_success
+            if record.observation is not None
+        )
+        lines.append(
+            f"| {bucket} | {len(bucket_records)} | {len(bucket_success)} | {bucket_poor} |"
+        )
     average_duration = (
         sum(record.duration_ms for record in records) / len(records) if records else 0.0
     )
