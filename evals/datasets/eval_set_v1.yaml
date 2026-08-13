@@ -1,5 +1,6 @@
-version: '2026-08-13'
-description: Balanced CTX-UXO test-split subset; source labels retained without relabeling.
+version: '1'
+description: CTX-UXO YOLO-bbox test crops with context and medium-confidence background
+  distractors.
 samples:
 - id: eval_001
   filename: eval_001.jpg
@@ -11,7 +12,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -21,7 +22,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3366.jpg; source_class=AntiSubmarine Bomb; original_bbox_xywh={''x'':
+    75.93804, ''y'': 162.42218400000002, ''width'': 896.48424, ''height'': 180.35136799999998};
+    context_padding=15%'
 - id: eval_002
   filename: eval_002.jpg
   source_url: https://zenodo.org/records/17052675
@@ -32,7 +35,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -42,7 +45,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3001.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    670.9998600000001, ''y'': 761.0005800000001, ''width'': 857.99952, ''height'':
+    955.99908}; context_padding=15%'
 - id: eval_003
   filename: eval_003.jpg
   source_url: https://zenodo.org/records/17052675
@@ -53,7 +58,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -63,7 +68,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3002.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    7.999605000000088, ''y'': 387.99984, ''width'': 657.9994499999999, ''height'':
+    215.99928}; context_padding=15%'
 - id: eval_004
   filename: eval_004.jpg
   source_url: https://zenodo.org/records/17052675
@@ -74,7 +81,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -84,7 +91,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3003.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    -0.0007650000000012369, ''y'': 1049.9992200000002, ''width'': 200.00007, ''height'':
+    627.0001199999999}; context_padding=15%'
 - id: eval_005
   filename: eval_005.jpg
   source_url: https://zenodo.org/records/17052675
@@ -95,7 +104,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -105,7 +114,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3005.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    -0.001019999999925858, ''y'': 0.0007649999999728152, ''width'': 1228.00044, ''height'':
+    435.99951000000004}; context_padding=15%'
 - id: eval_006
   filename: eval_006.jpg
   source_url: https://zenodo.org/records/17052675
@@ -116,7 +127,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -126,7 +137,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3006.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    107.0, ''y'': 793.0005, ''width'': 251.0, ''height'': 273.0}; context_padding=15%'
 - id: eval_007
   filename: eval_007.jpg
   source_url: https://zenodo.org/records/17052675
@@ -137,7 +149,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -147,7 +159,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3009.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    293.99925, ''y'': 968.0, ''width'': 694.0005, ''height'': 241.0}; context_padding=15%'
 - id: eval_008
   filename: eval_008.jpg
   source_url: https://zenodo.org/records/17052675
@@ -158,7 +171,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -168,7 +181,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3010.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    981.000192, ''y'': 527.9996160000001, ''width'': 221.999104, ''height'': 387.000576};
+    context_padding=15%'
 - id: eval_009
   filename: eval_009.jpg
   source_url: https://zenodo.org/records/17052675
@@ -179,7 +194,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -189,7 +204,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3012.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    299.9997000000001, ''y'': 155.99976, ''width'': 501.00012, ''height'': 327.99984};
+    context_padding=15%'
 - id: eval_010
   filename: eval_010.jpg
   source_url: https://zenodo.org/records/17052675
@@ -210,7 +227,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3017.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    1354.999808, ''y'': 126.0, ''width'': 270.000128, ''height'': 541.999872}; context_padding=15%'
 - id: eval_011
   filename: eval_011.jpg
   source_url: https://zenodo.org/records/17052675
@@ -221,7 +239,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -231,7 +249,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3036.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    1094.0010000000002, ''y'': 1588.0, ''width'': 837.0000000000001, ''height'': 1700.0};
+    context_padding=15%'
 - id: eval_012
   filename: eval_012.jpg
   source_url: https://zenodo.org/records/17052675
@@ -242,7 +262,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -252,7 +272,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3050.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    1716.8, ''y'': 603.200232, ''width'': 1780.6, ''height'': 783.0}; context_padding=15%'
 - id: eval_013
   filename: eval_013.jpg
   source_url: https://zenodo.org/records/17052675
@@ -263,7 +284,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -273,7 +294,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3055.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    928.0001160000002, ''y'': 2111.2000000000003, ''width'': 667.0011599999999, ''height'':
+    1757.3999999999999}; context_padding=15%'
 - id: eval_014
   filename: eval_014.jpg
   source_url: https://zenodo.org/records/17052675
@@ -294,7 +317,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3056.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    299.0642399999999, ''y'': 290.0002320000001, ''width'': 1957.5, ''height'': 1640.31192};
+    context_padding=15%'
 - id: eval_015
   filename: eval_015.jpg
   source_url: https://zenodo.org/records/17052675
@@ -315,7 +340,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3254.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    404.00047049999995, ''y'': 164.00076800000002, ''width'': 215.99988900000002,
+    ''height'': 124.000256}; context_padding=15%'
 - id: eval_016
   filename: eval_016.jpg
   source_url: https://zenodo.org/records/17052675
@@ -326,7 +353,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: aviation_bomb
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -336,7 +363,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3263.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    392.00000000000006, ''y'': 471.9996, ''width'': 877.9999999999999, ''height'':
+    270.0}; context_padding=15%'
 - id: eval_017
   filename: eval_017.jpg
   source_url: https://zenodo.org/records/17052675
@@ -357,429 +386,11 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3267.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    1241.5619200000003, ''y'': 1277.8123119999998, ''width'': 2564.68576, ''height'':
+    1368.4367200000002}; context_padding=15%'
 - id: eval_018
   filename: eval_018.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: mortar
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
-- id: eval_019
-  filename: eval_019.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_020
-  filename: eval_020.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_021
-  filename: eval_021.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: landmine
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Sea Mine; no manual relabeling.'
-- id: eval_022
-  filename: eval_022.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: mortar
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
-- id: eval_023
-  filename: eval_023.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_024
-  filename: eval_024.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_025
-  filename: eval_025.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: mortar
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
-- id: eval_026
-  filename: eval_026.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_027
-  filename: eval_027.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_028
-  filename: eval_028.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_029
-  filename: eval_029.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: grenade
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
-- id: eval_030
-  filename: eval_030.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: grenade
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
-- id: eval_031
-  filename: eval_031.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: grenade
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
-- id: eval_032
-  filename: eval_032.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: mortar
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
-- id: eval_033
-  filename: eval_033.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_034
-  filename: eval_034.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: mortar
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
-- id: eval_035
-  filename: eval_035.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_036
-  filename: eval_036.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: grenade
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
-- id: eval_037
-  filename: eval_037.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: projectile
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
-- id: eval_038
-  filename: eval_038.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -798,7 +409,464 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3287.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    438.4799999999999, ''y'': 28.14060599999999, ''width'': 1096.2, ''height'': 352.34889};
+    context_padding=15%'
+- id: eval_019
+  filename: eval_019.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3317.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    440.79872400000005, ''y'': 1438.3999999999996, ''width'': 812.000232, ''height'':
+    2267.8}; context_padding=15%'
+- id: eval_020
+  filename: eval_020.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3328.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    182.47961599999985, ''y'': 820.648224, ''width'': 2325.007872, ''height'': 628.638912};
+    context_padding=15%'
+- id: eval_021
+  filename: eval_021.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: aviation_bomb
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3336.jpg; source_class=Aviation Bomb; original_bbox_xywh={''x'':
+    680.9552000000001, ''y'': 159.91140000000007, ''width'': 367.8816, ''height'':
+    620.1252}; context_padding=15%'
+- id: eval_022
+  filename: eval_022.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3247.jpg; source_class=Cartridge; original_bbox_xywh={''x'':
+    377.62739999999997, ''y'': 904.35456, ''width'': 263.61936000000003, ''height'':
+    90.63168}; context_padding=15%'
+- id: eval_023
+  filename: eval_023.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3321.jpg; source_class=Cartridge; original_bbox_xywh={''x'':
+    1703.74768, ''y'': 661.562964, ''width'': 271.87616, ''height'': 99.687384}; context_padding=15%'
+- id: eval_024
+  filename: eval_024.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3364.jpg; source_class=Cartridge; original_bbox_xywh={''x'':
+    700.0002559999999, ''y'': 1166.999808, ''width'': 120.000512, ''height'': 95.00006400000001};
+    context_padding=15%'
+- id: eval_025
+  filename: eval_025.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3384.jpg; source_class=Cartridge; original_bbox_xywh={''x'':
+    330.99904000000004, ''y'': 827.9990879999999, ''width'': 233.00223999999997, ''height'':
+    96.0008}; context_padding=15%'
+- id: eval_026
+  filename: eval_026.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3400.jpg; source_class=Cartridge; original_bbox_xywh={''x'':
+    691.2, ''y'': 599.04144, ''width'': 527.04, ''height'': 316.799424}; context_padding=15%'
+- id: eval_027
+  filename: eval_027.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3364.jpg; source_class=Cartridge; original_bbox_xywh={''x'':
+    1190.00064, ''y'': 1055.000064, ''width'': 99.999744, ''height'': 96.0}; context_padding=15%'
+- id: eval_028
+  filename: eval_028.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3364.jpg; source_class=Cartridge; original_bbox_xywh={''x'':
+    612.999168, ''y'': 1096.998912, ''width'': 106.000384, ''height'': 84.000768};
+    context_padding=15%'
+- id: eval_029
+  filename: eval_029.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3364.jpg; source_class=Cartridge; original_bbox_xywh={''x'':
+    441.99936, ''y'': 871.9994879999998, ''width'': 113.999872, ''height'': 97.999872};
+    context_padding=15%'
+- id: eval_030
+  filename: eval_030.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3519.jpg; source_class=Cartridge Magazine; original_bbox_xywh={''x'':
+    331.00019699999996, ''y'': 505.9991, ''width'': 614.000354, ''height'': 342.00061600000004};
+    context_padding=15%'
+- id: eval_031
+  filename: eval_031.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: cartridge
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3519.jpg; source_class=Cartridge Magazine; original_bbox_xywh={''x'':
+    224.99947799999995, ''y'': 283.99924799999997, ''width'': 593.0001, ''height'':
+    268.000384}; context_padding=15%'
+- id: eval_032
+  filename: eval_032.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3200.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    611.1439999999999, ''y'': 633.4987500000001, ''width'': 108.59840000000001, ''height'':
+    83.7765}; context_padding=15%'
+- id: eval_033
+  filename: eval_033.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3312.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    851.875812, ''y'': 3398.43576, ''width'': 308.124072, ''height'': 154.06192000000001};
+    context_padding=15%'
+- id: eval_034
+  filename: eval_034.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3375.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    2175.0, ''y'': 290.000232, ''width'': 725.0, ''height'': 407.811456}; context_padding=15%'
+- id: eval_035
+  filename: eval_035.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3384.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    1567.8142400000002, ''y'': 1386.562296, ''width'': 271.87616, ''height'': 262.81304};
+    context_padding=15%'
+- id: eval_036
+  filename: eval_036.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3399.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    2301.87384, ''y'': -0.0010440000000073724, ''width'': 924.37616, ''height'': 416.875464};
+    context_padding=15%'
+- id: eval_037
+  filename: eval_037.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3463.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    3461.87616, ''y'': 978.75, ''width'': 534.68576, ''height'': 734.061456}; context_padding=15%'
+- id: eval_038
+  filename: eval_038.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3312.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    525.625812, ''y'': 3171.87384, ''width'': 226.56261600000002, ''height'': 299.06192};
+    context_padding=15%'
 - id: eval_039
   filename: eval_039.jpg
   source_url: https://zenodo.org/records/17052675
@@ -809,7 +877,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: fuze
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -819,7 +887,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3375.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    2519.37384, ''y'': 960.6240720000001, ''width'': 570.93808, ''height'': 706.8756960000001};
+    context_padding=15%'
 - id: eval_040
   filename: eval_040.jpg
   source_url: https://zenodo.org/records/17052675
@@ -830,7 +900,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: fuze
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -840,7 +910,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3463.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    1875.93808, ''y'': 625.312152, ''width'': 598.12384, ''height'': 525.624768};
+    context_padding=15%'
 - id: eval_041
   filename: eval_041.jpg
   source_url: https://zenodo.org/records/17052675
@@ -851,7 +923,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: fuze
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -861,7 +933,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3463.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    1183.2, ''y'': 185.59918800000003, ''width'': 643.8000000000001, ''height'': 591.599304};
+    context_padding=15%'
 - id: eval_042
   filename: eval_042.jpg
   source_url: https://zenodo.org/records/17052675
@@ -872,7 +946,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: fuze
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -882,7 +956,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3312.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    734.063544, ''y'': 3606.87616, ''width'': 326.25, ''height'': 226.56192000000001};
+    context_padding=15%'
 - id: eval_043
   filename: eval_043.jpg
   source_url: https://zenodo.org/records/17052675
@@ -893,7 +969,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: fuze
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -903,7 +979,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3399.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    1250.6238400000002, ''y'': 416.8754640000001, ''width'': 580.0, ''height'': 924.3743039999999};
+    context_padding=15%'
 - id: eval_044
   filename: eval_044.jpg
   source_url: https://zenodo.org/records/17052675
@@ -914,7 +992,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: fuze
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -924,9 +1002,33 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3399.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    2048.12384, ''y'': 734.0625, ''width'': 435.0, ''height'': 1014.999768}; context_padding=15%'
 - id: eval_045
   filename: eval_045.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: fuze
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3375.jpg; source_class=Fuse; original_bbox_xywh={''x'':
+    1885.0, ''y'': 1223.4374999999998, ''width'': 725.0, ''height'': 552.812616};
+    context_padding=15%'
+- id: eval_046
+  filename: eval_046.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -945,28 +1047,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
-- id: eval_046
-  filename: eval_046.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: mortar
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_2992.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    568.9998, ''y'': 689.0, ''width'': 141.9996, ''height'': 270.0}; context_padding=15%'
 - id: eval_047
   filename: eval_047.jpg
   source_url: https://zenodo.org/records/17052675
@@ -987,7 +1069,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3014.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    1049.00013, ''y'': 553.0011599999999, ''width'': 329.99958, ''height'': 470.99928};
+    context_padding=15%'
 - id: eval_048
   filename: eval_048.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1008,7 +1092,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3026.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    835.9997040000001, ''y'': 2143.99784, ''width'': 338.999328, ''height'': 512.0008};
+    context_padding=15%'
 - id: eval_049
   filename: eval_049.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1029,7 +1115,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3027.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    2138.99824, ''y'': 751.0003560000001, ''width'': 543.00064, ''height'': 374.000472};
+    context_padding=15%'
 - id: eval_050
   filename: eval_050.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1040,7 +1128,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1050,7 +1138,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3028.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    767.0007, ''y'': 2123.99712, ''width'': 369.999864, ''height'': 241.0016}; context_padding=15%'
 - id: eval_051
   filename: eval_051.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1071,7 +1160,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3032.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    763.99938, ''y'': 1142.00016, ''width'': 322.00074, ''height'': 195.99912}; context_padding=15%'
 - id: eval_052
   filename: eval_052.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1082,7 +1172,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1092,7 +1182,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3034.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    614.11125, ''y'': 803.3329999999999, ''width'': 418.5075, ''height'': 440.834};
+    context_padding=15%'
 - id: eval_053
   filename: eval_053.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1113,7 +1205,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3039.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    1146.9610619999999, ''y'': 1798.3200000000002, ''width'': 969.960708, ''height'':
+    548.7}; context_padding=15%'
 - id: eval_054
   filename: eval_054.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1124,7 +1218,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1134,7 +1228,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3040.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    1404.6857599999998, ''y'': 743.125464, ''width'': 163.12384, ''height'': 135.937152};
+    context_padding=15%'
 - id: eval_055
   filename: eval_055.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1145,7 +1241,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1155,7 +1251,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3041.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    906.2407079999999, ''y'': 1741.6799999999998, ''width'': 233.64000000000001, ''height'':
+    208.85999999999999}; context_padding=15%'
 - id: eval_056
   filename: eval_056.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1166,7 +1264,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1176,7 +1274,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3044.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    335.31191999999993, ''y'': 1830.62384, ''width'': 851.874768, ''height'': 761.2476800000001};
+    context_padding=15%'
 - id: eval_057
   filename: eval_057.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1187,7 +1287,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1197,7 +1297,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3046.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    672.7984919999999, ''y'': 1716.7999999999997, ''width'': 974.400696, ''height'':
+    1218.0}; context_padding=15%'
 - id: eval_058
   filename: eval_058.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1208,7 +1310,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1218,7 +1320,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3047.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    371.7, ''y'': 1309.8000000000002, ''width'': 915.975, ''height'': 1464.676416};
+    context_padding=15%'
 - id: eval_059
   filename: eval_059.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1229,7 +1333,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1239,7 +1343,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3048.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    2347.18808, ''y'': 815.626044, ''width'': 117.81424, ''height'': 163.125}; context_padding=15%'
 - id: eval_060
   filename: eval_060.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1250,7 +1355,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1260,7 +1365,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3049.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    2039.0596, ''y'': 1314.062964, ''width'': 344.37615999999997, ''height'': 416.875464};
+    context_padding=15%'
 - id: eval_061
   filename: eval_061.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1271,7 +1378,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1281,7 +1388,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3051.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    2247.4999999999995, ''y'': 1024.0627319999999, ''width'': 471.24768, ''height'':
+    299.06215199999997}; context_padding=15%'
 - id: eval_062
   filename: eval_062.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1292,7 +1401,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1302,7 +1411,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3052.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    1067.2, ''y'': 835.2, ''width'': 319.0, ''height'': 359.59953599999994}; context_padding=15%'
 - id: eval_063
   filename: eval_063.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1323,7 +1433,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3054.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    269.040708, ''y'': 1444.3199999999997, ''width'': 1851.418584, ''height'': 1384.14};
+    context_padding=15%'
 - id: eval_064
   filename: eval_064.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1334,7 +1446,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: mortar
+    family: grenade
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1344,7 +1456,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3064.jpg; source_class=Grenade; original_bbox_xywh={''x'':
+    778.800708, ''y'': 1982.4000000000003, ''width'': 350.46000000000004, ''height'':
+    506.21999999999997}; context_padding=15%'
 - id: eval_065
   filename: eval_065.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1355,7 +1469,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: landmine
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1365,7 +1479,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3260.jpg; source_class=LandMine; original_bbox_xywh={''x'':
+    218.00025, ''y'': 432.0, ''width'': 438.00030000000004, ''height'': 318.0}; context_padding=15%'
 - id: eval_066
   filename: eval_066.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1386,7 +1501,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Mortar Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_2993.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    423.99974399999996, ''y'': 702.999552, ''width'': 191.000064, ''height'': 117.000192};
+    context_padding=15%'
 - id: eval_067
   filename: eval_067.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1397,7 +1514,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1407,7 +1524,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_2994.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    922.00048, ''y'': 933.99894, ''width'': 578.99776, ''height'': 665.000856}; context_padding=15%'
 - id: eval_068
   filename: eval_068.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1418,7 +1536,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1428,7 +1546,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_2995.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    801.998848, ''y'': 423.000576, ''width'': 369.000448, ''height'': 365.999616};
+    context_padding=15%'
 - id: eval_069
   filename: eval_069.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1439,7 +1559,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1449,7 +1569,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_2998.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    390.99974399999996, ''y'': 1355.9992320000001, ''width'': 335.00044799999995,
+    ''height'': 447.000576}; context_padding=15%'
 - id: eval_070
   filename: eval_070.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1460,7 +1582,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1470,7 +1592,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3000.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    364.00077, ''y'': 155.00022, ''width'': 556.99956, ''height'': 1883.99916}; context_padding=15%'
 - id: eval_071
   filename: eval_071.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1481,7 +1604,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1491,7 +1614,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3011.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    433.9998, ''y'': 666.0, ''width'': 203.0004, ''height'': 284.0}; context_padding=15%'
 - id: eval_072
   filename: eval_072.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1502,7 +1626,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1512,7 +1636,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3013.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    385.00002000000006, ''y'': 621.99906, ''width'': 546.99948, ''height'': 1349.001};
+    context_padding=15%'
 - id: eval_073
   filename: eval_073.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1523,7 +1649,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1533,7 +1659,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3014.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    411.99916500000006, ''y'': 124.00038000000018, ''width'': 502.00064999999995,
+    ''height'': 1852.99932}; context_padding=15%'
 - id: eval_074
   filename: eval_074.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1544,7 +1672,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1554,7 +1682,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3019.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    871.9989119999999, ''y'': 1578.99896, ''width'': 429.00048, ''height'': 1573.00176};
+    context_padding=15%'
 - id: eval_075
   filename: eval_075.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1565,7 +1695,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1575,7 +1705,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3022.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    2056.00256, ''y'': 509.0001120000002, ''width'': 1225.99936, ''height'': 1468.9998719999999};
+    context_padding=15%'
 - id: eval_076
   filename: eval_076.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1586,7 +1718,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1596,7 +1728,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3029.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    1068.998112, ''y'': 888.998544, ''width'': 1572.000192, ''height'': 945.0}; context_padding=15%'
 - id: eval_077
   filename: eval_077.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1607,7 +1740,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1617,7 +1750,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3031.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    482.00048999999996, ''y'': 722.0008799999998, ''width'': 801.0009000000001, ''height'':
+    3069.00048}; context_padding=15%'
 - id: eval_078
   filename: eval_078.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1628,7 +1763,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: grenade
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1638,7 +1773,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Grenade; no manual relabeling.'
+  notes: 'source_image=UXOs_3032.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    5.000040000000013, ''y'': 496.0005, ''width'': 1432.00044, ''height'': 341.00028};
+    context_padding=15%'
 - id: eval_079
   filename: eval_079.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1649,7 +1786,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1659,7 +1796,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3037.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    0.0, ''y'': 1225.0004999999999, ''width'': 3765.0, ''height'': 911.0010000000001};
+    context_padding=15%'
 - id: eval_080
   filename: eval_080.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1670,7 +1809,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1680,7 +1819,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3040.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    2211.25, ''y'': 1558.7504640000002, ''width'': 1812.5, ''height'': 398.749536};
+    context_padding=15%'
 - id: eval_081
   filename: eval_081.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1691,7 +1832,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1701,7 +1842,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3042.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    2900.0, ''y'': 556.8006960000001, ''width'': 481.4, ''height'': 991.8}; context_padding=15%'
 - id: eval_082
   filename: eval_082.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1712,7 +1854,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1722,7 +1864,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3043.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    879.0636599999999, ''y'': 1377.5, ''width'': 697.811688, ''height'': 2610.0};
+    context_padding=15%'
 - id: eval_083
   filename: eval_083.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1733,7 +1877,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1743,7 +1887,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3045.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    715.9357599999998, ''y'': 616.2491879999999, ''width'': 2827.5, ''height'': 933.438312};
+    context_padding=15%'
 - id: eval_084
   filename: eval_084.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1754,7 +1900,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: projectile
+    family: mortar
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1764,7 +1910,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Projectile; no manual relabeling.'
+  notes: 'source_image=UXOs_3048.jpg; source_class=Mortar Bomb; original_bbox_xywh={''x'':
+    2691.56192, ''y'': 335.31192, ''width'': 824.68576, ''height'': 1051.249536};
+    context_padding=15%'
 - id: eval_085
   filename: eval_085.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1775,7 +1923,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: cartridge
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1785,7 +1933,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Cartridge; no manual relabeling.'
+  notes: 'source_image=UXOs_2996.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    443.74980000000005, ''y'': 449.99999999999994, ''width'': 328.1244, ''height'':
+    534.3744}; context_padding=15%'
 - id: eval_086
   filename: eval_086.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1796,7 +1946,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1806,7 +1956,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_2997.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    440.6244, ''y'': 425.00079999999997, ''width'': 406.2504, ''height'': 742.1872};
+    context_padding=15%'
 - id: eval_087
   filename: eval_087.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1817,7 +1969,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1827,7 +1979,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_2999.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    609.0, ''y'': 486.0, ''width'': 215.99999999999997, ''height'': 763.0}; context_padding=15%'
 - id: eval_088
   filename: eval_088.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1838,7 +1991,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1848,7 +2001,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3002.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    11.99902499999996, ''y'': 816.00102, ''width'': 941.0004900000001, ''height'':
+    893.9993999999999}; context_padding=15%'
 - id: eval_089
   filename: eval_089.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1859,7 +2014,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1869,7 +2024,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3003.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    102.99959999999999, ''y'': 715.9992, ''width'': 1205.00046, ''height'': 938.0001599999999};
+    context_padding=15%'
 - id: eval_090
   filename: eval_090.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1880,7 +2037,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1890,7 +2047,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3004.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    65.9991, ''y'': 506.999925, ''width'': 1921.00068, ''height'': 598.99959}; context_padding=15%'
 - id: eval_091
   filename: eval_091.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1901,7 +2059,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: cartridge
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1911,7 +2069,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Cartridge; no manual relabeling.'
+  notes: 'source_image=UXOs_3005.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    173.99976000000004, ''y'': 1168.00047, ''width'': 1562.99904, ''height'': 361.00043999999997};
+    context_padding=15%'
 - id: eval_092
   filename: eval_092.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1922,7 +2082,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: rocket
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1932,7 +2092,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: RPG; no manual relabeling.'
+  notes: 'source_image=UXOs_3007.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    721.9992, ''y'': 315.99989999999997, ''width'': 703.0, ''height'': 392.0004};
+    context_padding=15%'
 - id: eval_093
   filename: eval_093.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1943,7 +2105,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1953,7 +2115,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3008.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    475.9992, ''y'': 81.99990000000003, ''width'': 611.0, ''height'': 608.0004}; context_padding=15%'
 - id: eval_094
   filename: eval_094.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1964,7 +2127,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1974,7 +2137,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3015.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    0.0, ''y'': 1192.9991400000001, ''width'': 2009.00016, ''height'': 336.00024};
+    context_padding=15%'
 - id: eval_095
   filename: eval_095.jpg
   source_url: https://zenodo.org/records/17052675
@@ -1985,7 +2150,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -1995,7 +2160,8 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3016.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    477.0008, ''y'': 81.99990000000003, ''width'': 611.0, ''height'': 608.0004}; context_padding=15%'
 - id: eval_096
   filename: eval_096.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2006,7 +2172,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2016,7 +2182,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3017.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    1010.000896, ''y'': 261.99936, ''width'': 181.999616, ''height'': 461.00044799999995};
+    context_padding=15%'
 - id: eval_097
   filename: eval_097.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2027,7 +2195,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2037,7 +2205,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3020.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    1694.0013600000002, ''y'': 953.9988480000002, ''width'': 1281.99952, ''height'':
+    593.0003519999999}; context_padding=15%'
 - id: eval_098
   filename: eval_098.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2048,7 +2218,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2058,7 +2228,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3021.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    427.00017599999995, ''y'': 1218.9976, ''width'': 899.000928, ''height'': 2561.0016};
+    context_padding=15%'
 - id: eval_099
   filename: eval_099.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2069,7 +2241,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2079,7 +2251,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3023.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    1473.0004800000002, ''y'': 1009.000944, ''width'': 810.99776, ''height'': 392.999184};
+    context_padding=15%'
 - id: eval_100
   filename: eval_100.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2090,7 +2264,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2100,7 +2274,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3024.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    1049.9995199999996, ''y'': 602.0006760000001, ''width'': 2880.0016, ''height'':
+    799.0003439999999}; context_padding=15%'
 - id: eval_101
   filename: eval_101.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2111,7 +2287,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: projectile
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2121,9 +2297,57 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3025.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    896.99958, ''y'': 1773.9996, ''width'': 510.000264, ''height'': 1511.0020800000002};
+    context_padding=15%'
 - id: eval_102
   filename: eval_102.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3030.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    805.0000000000001, ''y'': 519.99975, ''width'': 316.0, ''height'': 326.9997};
+    context_padding=15%'
+- id: eval_103
+  filename: eval_103.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: projectile
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3033.jpg; source_class=Projectile; original_bbox_xywh={''x'':
+    0.0, ''y'': 2031.0015599999997, ''width'': 2109.99852, ''height'': 1121.0004000000001};
+    context_padding=15%'
+- id: eval_104
+  filename: eval_104.jpg
   source_url: https://zenodo.org/records/17052675
   license: CC BY 4.0
   attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
@@ -2142,49 +2366,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: RPG; no manual relabeling.'
-- id: eval_103
-  filename: eval_103.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: cartridge
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Cartridge; no manual relabeling.'
-- id: eval_104
-  filename: eval_104.jpg
-  source_url: https://zenodo.org/records/17052675
-  license: CC BY 4.0
-  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
-    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
-    10.21227/cwnm-de53'
-  retrieved: '2026-08-13'
-  ground_truth:
-    is_ordnance: true
-    family: cartridge
-    confidence_of_label: high
-    label_rationale: null
-  attributes:
-    partially_buried: false
-    corroded: false
-    fragmented: false
-    scale_reference_present: false
-    poor_lighting: false
-    distant_or_small_in_frame: false
-  notes: 'Source class: Cartridge; no manual relabeling.'
+  notes: 'source_image=UXOs_3325.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    145.69014199999998, ''y'': 303.81000000000006, ''width'': 325.795802, ''height'':
+    1069.33125}; context_padding=15%'
 - id: eval_105
   filename: eval_105.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2195,7 +2379,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: fuze
+    family: rocket
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2205,7 +2389,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Fuse; no manual relabeling.'
+  notes: 'source_image=UXOs_3360.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    446.9396035, ''y'': 626.5600000000001, ''width'': 126.380033, ''height'': 446.78};
+    context_padding=15%'
 - id: eval_106
   filename: eval_106.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2216,7 +2402,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: rocket
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2226,7 +2412,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3384.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    2294.96952, ''y'': 1757.8736000000001, ''width'': 447.85744, ''height'': 1645.665504};
+    context_padding=15%'
 - id: eval_107
   filename: eval_107.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2237,7 +2425,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: fuze
+    family: rocket
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2247,7 +2435,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Fuse; no manual relabeling.'
+  notes: 'source_image=UXOs_3403.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    661.9392799999999, ''y'': 1179.250356, ''width'': 205.81071999999998, ''height'':
+    444.999288}; context_padding=15%'
 - id: eval_108
   filename: eval_108.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2258,7 +2448,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: cartridge
+    family: rocket
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2268,7 +2458,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Cartridge; no manual relabeling.'
+  notes: 'source_image=UXOs_3406.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    778.7514239999999, ''y'': 239.18714400000022, ''width'': 289.248576, ''height'':
+    1396.1878559999998}; context_padding=15%'
 - id: eval_109
   filename: eval_109.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2279,7 +2471,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: rocket
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2289,7 +2481,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3449.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    770.312268, ''y'': 1794.37616, ''width'': 1268.750232, ''height'': 1486.24768};
+    context_padding=15%'
 - id: eval_110
   filename: eval_110.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2300,7 +2494,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: aviation_bomb
+    family: rocket
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2310,7 +2504,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Aviation Bomb; no manual relabeling.'
+  notes: 'source_image=UXOs_3403.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    923.3728639999999, ''y'': 1062.4378559999998, ''width'': 155.75142400000001, ''height'':
+    600.75}; context_padding=15%'
 - id: eval_111
   filename: eval_111.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2321,7 +2517,7 @@ samples:
   retrieved: '2026-08-13'
   ground_truth:
     is_ordnance: true
-    family: fuze
+    family: rocket
     confidence_of_label: high
     label_rationale: null
   attributes:
@@ -2331,7 +2527,9 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Fuse; no manual relabeling.'
+  notes: 'source_image=UXOs_3384.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    2138.75, ''y'': 489.37492799999984, ''width'': 344.37615999999997, ''height'':
+    1323.123648}; context_padding=15%'
 - id: eval_112
   filename: eval_112.jpg
   source_url: https://zenodo.org/records/17052675
@@ -2352,4 +2550,960 @@ samples:
     scale_reference_present: false
     poor_lighting: false
     distant_or_small_in_frame: false
-  notes: 'Source class: Rocket; no manual relabeling.'
+  notes: 'source_image=UXOs_3403.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    990.124288, ''y'': 556.2496440000001, ''width'': 116.81356799999999, ''height'':
+    372.687144}; context_padding=15%'
+- id: eval_113
+  filename: eval_113.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: rocket
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3406.jpg; source_class=RPG; original_bbox_xywh={''x'':
+    261.437856, ''y'': 545.1242880000001, ''width'': 344.87571199999996, ''height'':
+    862.187856}; context_padding=15%'
+- id: eval_114
+  filename: eval_114.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: rocket
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3497.jpg; source_class=Rocket; original_bbox_xywh={''x'':
+    310.00000000000006, ''y'': 107.00016000000002, ''width'': 312.99968, ''height'':
+    122.99999999999999}; context_padding=15%'
+- id: eval_115
+  filename: eval_115.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: rocket
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3497.jpg; source_class=Rocket; original_bbox_xywh={''x'':
+    286.99968, ''y'': 157.99992000000003, ''width'': 304.0, ''height'': 138.99983999999998};
+    context_padding=15%'
+- id: eval_116
+  filename: eval_116.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: rocket
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3497.jpg; source_class=Rocket; original_bbox_xywh={''x'':
+    216.99968, ''y'': 204.0, ''width'': 347.00032, ''height'': 201.0}; context_padding=15%'
+- id: eval_117
+  filename: eval_117.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: true
+    family: landmine
+    confidence_of_label: high
+    label_rationale: null
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3018.jpg; source_class=Sea Mine; original_bbox_xywh={''x'':
+    0.0003600000000574255, ''y'': 699.0, ''width'': 718.99992, ''height'': 900.0};
+    context_padding=15%'
+- id: eval_118
+  filename: eval_118.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3474.jpg; sampled_bbox_xywh={''x'': 1737.0, ''y'': 510.0,
+    ''width'': 152.0, ''height'': 484.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_119
+  filename: eval_119.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3487.jpg; sampled_bbox_xywh={''x'': 2019.0, ''y'': 571.0,
+    ''width'': 303.0, ''height'': 125.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_120
+  filename: eval_120.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3297.jpg; sampled_bbox_xywh={''x'': 1928.0, ''y'': 2438.0,
+    ''width'': 148.0, ''height'': 127.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_121
+  filename: eval_121.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3287.jpg; sampled_bbox_xywh={''x'': 26.0, ''y'': 1001.0,
+    ''width'': 1971.0, ''height'': 416.0}; seed=42; unannotated background is not
+    guaranteed ordnance-free'
+- id: eval_122
+  filename: eval_122.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3230.jpg; sampled_bbox_xywh={''x'': 410.0, ''y'': 1692.0,
+    ''width'': 902.0, ''height'': 313.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_123
+  filename: eval_123.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3330.jpg; sampled_bbox_xywh={''x'': 967.0, ''y'': 823.0,
+    ''width'': 914.0, ''height'': 510.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_124
+  filename: eval_124.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3229.jpg; sampled_bbox_xywh={''x'': 152.0, ''y'': 358.0,
+    ''width'': 436.0, ''height'': 581.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_125
+  filename: eval_125.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3288.jpg; sampled_bbox_xywh={''x'': 76.0, ''y'': 18.0,
+    ''width'': 448.0, ''height'': 1121.0}; seed=42; unannotated background is not
+    guaranteed ordnance-free'
+- id: eval_126
+  filename: eval_126.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3471.jpg; sampled_bbox_xywh={''x'': 394.0, ''y'': 922.0,
+    ''width'': 353.0, ''height'': 342.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_127
+  filename: eval_127.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3330.jpg; sampled_bbox_xywh={''x'': 1497.0, ''y'': 1879.0,
+    ''width'': 478.0, ''height'': 806.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_128
+  filename: eval_128.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3255.jpg; sampled_bbox_xywh={''x'': 381.0, ''y'': 28.0,
+    ''width'': 914.0, ''height'': 510.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_129
+  filename: eval_129.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3189.jpg; sampled_bbox_xywh={''x'': 1251.0, ''y'': 2616.0,
+    ''width'': 353.0, ''height'': 130.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_130
+  filename: eval_130.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3402.jpg; sampled_bbox_xywh={''x'': 195.0, ''y'': 378.0,
+    ''width'': 528.0, ''height'': 965.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_131
+  filename: eval_131.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_2998.jpg; sampled_bbox_xywh={''x'': 98.0, ''y'': 482.0,
+    ''width'': 942.0, ''height'': 530.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_132
+  filename: eval_132.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3233.jpg; sampled_bbox_xywh={''x'': 2735.0, ''y'': 242.0,
+    ''width'': 289.0, ''height'': 503.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_133
+  filename: eval_133.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3506.jpg; sampled_bbox_xywh={''x'': 1440.0, ''y'': 1273.0,
+    ''width'': 395.0, ''height'': 181.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_134
+  filename: eval_134.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3374.jpg; sampled_bbox_xywh={''x'': 1437.0, ''y'': 3857.0,
+    ''width'': 212.0, ''height'': 177.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_135
+  filename: eval_135.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3509.jpg; sampled_bbox_xywh={''x'': 1172.0, ''y'': 2198.0,
+    ''width'': 685.0, ''height'': 412.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_136
+  filename: eval_136.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3444.jpg; sampled_bbox_xywh={''x'': 841.0, ''y'': 1468.0,
+    ''width'': 281.0, ''height'': 161.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_137
+  filename: eval_137.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3048.jpg; sampled_bbox_xywh={''x'': 1080.0, ''y'': 1051.0,
+    ''width'': 153.0, ''height'': 212.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_138
+  filename: eval_138.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3417.jpg; sampled_bbox_xywh={''x'': 1154.0, ''y'': 118.0,
+    ''width'': 153.0, ''height'': 212.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_139
+  filename: eval_139.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3397.jpg; sampled_bbox_xywh={''x'': 3.0, ''y'': 446.0,
+    ''width'': 401.0, ''height'': 200.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_140
+  filename: eval_140.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3057.jpg; sampled_bbox_xywh={''x'': 246.0, ''y'': 4.0,
+    ''width'': 724.0, ''height'': 2040.0}; seed=42; unannotated background is not
+    guaranteed ordnance-free'
+- id: eval_141
+  filename: eval_141.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3176.jpg; sampled_bbox_xywh={''x'': 34.0, ''y'': 860.0,
+    ''width'': 1054.0, ''height'': 511.0}; seed=42; unannotated background is not
+    guaranteed ordnance-free'
+- id: eval_142
+  filename: eval_142.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3375.jpg; sampled_bbox_xywh={''x'': 3133.0, ''y'': 918.0,
+    ''width'': 395.0, ''height'': 181.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_143
+  filename: eval_143.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3426.jpg; sampled_bbox_xywh={''x'': 776.0, ''y'': 3372.0,
+    ''width'': 436.0, ''height'': 581.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_144
+  filename: eval_144.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3227.jpg; sampled_bbox_xywh={''x'': 1886.0, ''y'': 1417.0,
+    ''width'': 141.0, ''height'': 109.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_145
+  filename: eval_145.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3026.jpg; sampled_bbox_xywh={''x'': 612.0, ''y'': 2752.0,
+    ''width'': 1191.0, ''height'': 1742.0}; seed=42; unannotated background is not
+    guaranteed ordnance-free'
+- id: eval_146
+  filename: eval_146.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3041.jpg; sampled_bbox_xywh={''x'': 1516.0, ''y'': 181.0,
+    ''width'': 141.0, ''height'': 109.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_147
+  filename: eval_147.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3214.jpg; sampled_bbox_xywh={''x'': 442.0, ''y'': 231.0,
+    ''width'': 1667.0, ''height'': 771.0}; seed=42; unannotated background is not
+    guaranteed ordnance-free'
+- id: eval_148
+  filename: eval_148.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3320.jpg; sampled_bbox_xywh={''x'': 1236.0, ''y'': 293.0,
+    ''width'': 771.0, ''height'': 348.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_149
+  filename: eval_149.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3476.jpg; sampled_bbox_xywh={''x'': 3478.0, ''y'': 461.0,
+    ''width'': 771.0, ''height'': 348.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_150
+  filename: eval_150.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3302.jpg; sampled_bbox_xywh={''x'': 31.0, ''y'': 867.0,
+    ''width'': 720.0, ''height'': 1036.0}; seed=42; unannotated background is not
+    guaranteed ordnance-free'
+- id: eval_151
+  filename: eval_151.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3186.jpg; sampled_bbox_xywh={''x'': 240.0, ''y'': 1961.0,
+    ''width'': 794.0, ''height'': 781.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'
+- id: eval_152
+  filename: eval_152.jpg
+  source_url: https://zenodo.org/records/17052675
+  license: CC BY 4.0
+  attribution: 'CTX-UXO: A Comprehensive Dataset for Detection and Identification
+    of UneXploded Ordnances — Craioveanu, Gheorghe Marian, Stamatescu, Grigore — DOI
+    10.21227/cwnm-de53'
+  retrieved: '2026-08-13'
+  ground_truth:
+    is_ordnance: false
+    family: not_ordnance
+    confidence_of_label: medium
+    label_rationale: background region with no annotated ordnance; absence of annotation
+      is not a guarantee of absence
+  attributes:
+    partially_buried: false
+    corroded: false
+    fragmented: false
+    scale_reference_present: false
+    poor_lighting: false
+    distant_or_small_in_frame: false
+  notes: 'source_image=UXOs_3218.jpg; sampled_bbox_xywh={''x'': 298.0, ''y'': 66.0,
+    ''width'': 794.0, ''height'': 781.0}; seed=42; unannotated background is not guaranteed
+    ordnance-free'

@@ -9,7 +9,7 @@ from ordnance_id.evals.io import load_eval_set
 
 
 def main(
-    eval_path: Path = Path("evals/ctx_uxo_eval.yaml"),
+    eval_path: Path = Path("evals/datasets/eval_set_v1.yaml"),
     image_dir: Path = Path("data/eval_images"),
 ) -> None:
     """Validate schema and verify that every referenced image exists."""
