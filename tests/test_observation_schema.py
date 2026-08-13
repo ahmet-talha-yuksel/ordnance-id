@@ -10,7 +10,8 @@ def observation_values() -> dict[str, object]:
         "fins_or_tail_visible": None,
         "fuze_visible": False,
         "driving_band_visible": None,
-        "markings_or_stencil_text": None,
+        "markings_visible": False,
+        "markings_text": None,
         "color_bands": [],
         "surface_condition": "weathered",
         "embedded_in_ground": False,
@@ -25,8 +26,8 @@ def observation_values() -> dict[str, object]:
 
 def test_unknown_nullable_features_are_explicit() -> None:
     observation = OrdnanceObservation.model_validate(observation_values())
-    assert "fins_or_tail_visible" in observation.unclear_features
-    assert "driving_band_visible" in observation.unclear_features
+    assert any(item.startswith("fins_or_tail_visible:") for item in observation.unclear_features)
+    assert any(item.startswith("driving_band_visible:") for item in observation.unclear_features)
 
 
 def test_identification_fields_are_forbidden() -> None:

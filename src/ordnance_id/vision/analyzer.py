@@ -71,8 +71,14 @@ class VisionAnalyzer:
         )
         if scale.reference_type == "none" or scale.pixels_per_mm is None:
             observation.estimated_length_cm = None
-            if "estimated_length_cm" not in observation.unclear_features:
-                observation.unclear_features.append("estimated_length_cm")
+            has_length_reason = any(
+                item.startswith("estimated_length_cm:")
+                for item in observation.unclear_features
+            )
+            if not has_length_reason:
+                observation.unclear_features.append(
+                    "estimated_length_cm: no manual scale reference"
+                )
         return observation
 
     def system_prompt(self) -> str:

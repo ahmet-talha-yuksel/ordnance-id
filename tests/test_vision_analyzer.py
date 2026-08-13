@@ -44,7 +44,8 @@ class FakeGateway:
                 "fins_or_tail_visible": None,
                 "fuze_visible": None,
                 "driving_band_visible": None,
-                "markings_or_stencil_text": None,
+                "markings_visible": None,
+                "markings_text": None,
                 "color_bands": [],
                 "surface_condition": "unclear",
                 "embedded_in_ground": None,
@@ -65,7 +66,7 @@ async def test_analyzer_clears_length_without_scale(tmp_path: Path) -> None:
     observation = await analyzer.observe(image_bytes())
     assert isinstance(observation, OrdnanceObservation)
     assert observation.estimated_length_cm is None
-    assert "estimated_length_cm" in observation.unclear_features
+    assert any(item.startswith("estimated_length_cm:") for item in observation.unclear_features)
 
 
 async def test_analyzer_downscales_only_oversized_images(tmp_path: Path) -> None:

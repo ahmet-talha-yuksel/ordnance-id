@@ -23,7 +23,8 @@ class OrdnanceObservation(BaseModel):
     fins_or_tail_visible: bool | None
     fuze_visible: bool | None
     driving_band_visible: bool | None
-    markings_or_stencil_text: str | None
+    markings_visible: bool | None
+    markings_text: str | None
     color_bands: list[str] = Field(default_factory=list)
     surface_condition: Literal[
         "clean", "weathered", "corroded", "heavily_corroded", "unclear"
@@ -44,14 +45,15 @@ class OrdnanceObservation(BaseModel):
             "fins_or_tail_visible",
             "fuze_visible",
             "driving_band_visible",
-            "markings_or_stencil_text",
+            "markings_visible",
+            "markings_text",
             "embedded_in_ground",
             "length_to_width_ratio",
             "looks_manufactured",
         )
         existing = set(self.unclear_features)
         for field_name in nullable:
-            if getattr(self, field_name) is None and field_name not in existing:
-                self.unclear_features.append(field_name)
+            has_reason = any(item.startswith(f"{field_name}:") for item in existing)
+            if getattr(self, field_name) is None and not has_reason:
+                self.unclear_features.append(f"{field_name}: reason not provided by model")
         return self
-

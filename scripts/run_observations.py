@@ -36,6 +36,7 @@ async def _run(
     yes: bool,
     input_cost_per_million: float,
     output_cost_per_million: float,
+    prompt_path: Path,
 ) -> None:
     settings = get_settings()
     active_model = (
@@ -49,7 +50,8 @@ async def _run(
             for character in active_model
         )
         output = Path(
-            f"evals/results/observations_observe_v1_{settings.LLM_PROVIDER}_{safe_model}.jsonl"
+            f"evals/results/observations_{prompt_path.stem}_{settings.LLM_PROVIDER}_"
+            f"{safe_model}.jsonl"
         )
     eval_set = load_eval_set(eval_path)
     if sample_ids:
@@ -66,7 +68,7 @@ async def _run(
         ]
     else:
         samples = eval_set.samples[:limit] if limit is not None else eval_set.samples
-    prompt_chars = len(Path("prompts/observe_v1.md").read_text(encoding="utf-8"))
+    prompt_chars = len(prompt_path.read_text(encoding="utf-8"))
     estimated_text_tokens = len(samples) * (prompt_chars // 4 + 100)
     estimated_image_tokens = 0
     for sample in samples:
@@ -82,7 +84,7 @@ async def _run(
     )
     typer.echo(
         f"Provider={settings.LLM_PROVIDER} model={active_model} samples={len(samples)} "
-        f"prompt=observe_v1 samples={len(samples)} image_tokens≈{estimated_image_tokens} "
+        f"prompt={prompt_path.stem} samples={len(samples)} image_tokens≈{estimated_image_tokens} "
         f"text_tokens≈{estimated_text_tokens} output_tokens≤{estimated_output}; "
         + (
             f"maliyet: $0 (free tier); günlük kota≈{len(samples)}/{settings.GEMINI_RPD} istek"
@@ -98,7 +100,9 @@ async def _run(
     if not yes and not typer.confirm("Proceed with provider calls?"):
         raise typer.Abort()
     provider = get_provider(settings)
-    analyzer = VisionAnalyzer(provider, max_edge_px=settings.VISION_MAX_EDGE_PX)
+    analyzer = VisionAnalyzer(
+        provider, prompt_path=prompt_path, max_edge_px=settings.VISION_MAX_EDGE_PX
+    )
     cache = StructuredDiskCache(cache_dir)
     completed: set[str] = set()
     if output.exists():
@@ -174,6 +178,7 @@ def run(
     yes: bool = False,
     input_cost_per_million: Annotated[float, typer.Option(min=0)] = 0.0,
     output_cost_per_million: Annotated[float, typer.Option(min=0)] = 0.0,
+    prompt_path: Path = Path("prompts/observe_v1.md"),
 ) -> None:
     """Estimate first, then optionally run cached observations sequentially."""
 
@@ -190,6 +195,7 @@ def run(
             yes,
             input_cost_per_million,
             output_cost_per_million,
+            prompt_path,
         )
     )
 

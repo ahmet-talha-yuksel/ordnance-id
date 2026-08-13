@@ -47,7 +47,8 @@ def write_observation_report(
         "fins_or_tail_visible",
         "fuze_visible",
         "driving_band_visible",
-        "markings_or_stencil_text",
+        "markings_visible",
+        "markings_text",
         "embedded_in_ground",
         "estimated_length_cm",
         "length_to_width_ratio",
@@ -76,6 +77,13 @@ def write_observation_report(
         )
         rate = none_count / len(successful) * 100 if successful else 0.0
         lines.append(f"| {field_name} | {none_count} | {rate:.1f}% |")
+    lines.extend(
+        [
+            "",
+            "`estimated_length_cm` is not applicable in this eval set "
+            "(no scale references present) and is excluded from aggregate completion rates.",
+        ]
+    )
     unclear = Counter(
         feature for _record, observation in successful for feature in observation.unclear_features
     )

@@ -37,9 +37,9 @@ NULLABLE_FIELDS = (
     "fins_or_tail_visible",
     "fuze_visible",
     "driving_band_visible",
-    "markings_or_stencil_text",
+    "markings_visible",
+    "markings_text",
     "embedded_in_ground",
-    "estimated_length_cm",
     "length_to_width_ratio",
     "looks_manufactured",
 )
@@ -95,6 +95,10 @@ def inspect(records: list[ObservationRecord]) -> str:
         [
             "",
             "## 2. Nullable-field rates by size bucket",
+            "",
+            "`estimated_length_cm` is not applicable in this eval set "
+            "(no scale references present) "
+            "and is excluded from completion rates.",
             "",
             "| Bucket | Field | None | Total | None rate |",
             "|---|---|---:|---:|---:|",
