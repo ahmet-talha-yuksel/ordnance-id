@@ -30,7 +30,7 @@ services.
 cp .env.example .env
 uv sync
 docker compose up -d
-uv run uvicorn ordnance_id.api.main:app --reload
+uv run uvicorn --app-dir src ordnance_id.api.main:app --reload
 ```
 
 Fill the required model names, database URLs, and the selected provider's credentials in `.env`.

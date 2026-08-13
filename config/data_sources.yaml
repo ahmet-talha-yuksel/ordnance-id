@@ -1,0 +1,16 @@
+sources:
+  - name: ctx-uxo-v2
+    title: "CTX-UXO: A Comprehensive Dataset for Detection and Identification of UneXploded Ordnances"
+    authors:
+      - "Craioveanu, Gheorghe Marian"
+      - "Stamatescu, Grigore"
+    affiliation: "National University of Science and Technology Politehnica Bucharest"
+    doi: "10.21227/cwnm-de53"
+    landing_page: "https://zenodo.org/records/17052675"
+    download_url: "https://zenodo.org/records/17052675/files/CTX_UXO_DS_v2_2025.zip?download=1"
+    license: "CC BY 4.0"
+    md5: "4191257476e65a50f72dfb9d3ad3213d"
+    size_bytes: 3900000000
+    target_dir: "data/raw/ctx-uxo"
+    redistribute: false
+
